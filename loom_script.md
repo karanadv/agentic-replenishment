@@ -21,24 +21,31 @@ uncertain."
 
 Switch to the **Dashboard** tab.
 
-"This is 26 weeks of synthetic sales, inventory, and supplier data across 15 SKUs.
-Every row here is a recommendation the agent already computed — quantity, confidence,
-and whether it's auto-approved or held for review."
+"This is 26 weeks of synthetic sales, inventory, and supplier data across 15 SKUs, split
+across online and in-store channels since this is an omnichannel retailer. Every row here
+is a recommendation the agent already computed — quantity, confidence, and whether it's
+auto-approved, needs review, or flagged urgent."
 
 Point at the sorted-by-confidence table.
 
 "Notice it's sorted by confidence — the ones the system is least sure about float to
 the top automatically."
 
-## 3. Walk through the three edge cases (90 sec)
+## 3. Walk through the four edge cases (100 sec)
 
-Use the SKU selector to show each chart while narrating:
+Use the SKU selector to show each channel-split chart while narrating:
 
 **Demand spike — APP-1042:**
-"This jacket saw a 4x demand jump in the last three weeks — a viral video, in this case.
-A naive system might read that as the new normal and massively over-order. Instead, the
-agent flags it as a likely spike, discounts it back to the 8-week baseline, and drops its
-own confidence to 70% instead of pretending it's sure."
+"This jacket saw a 4x demand jump in the last three weeks — a viral video, driven mostly
+through the online channel. A naive system might read that as the new normal and massively
+over-order. Instead, the agent flags it as a likely spike, discounts it back to the 8-week
+baseline, and drops its own confidence to 50% instead of pretending it's sure."
+
+**Hidden channel shift — APP-2210:**
+"This one's subtle: total units sold barely change week to week — nothing looks unusual in
+the aggregate. But online demand triples while in-store drops. You can only see it here,
+at the channel level. That matters because the stock allocated for online fulfillment hasn't
+caught up to where demand actually moved."
 
 **Lead-time disruption — FTW-3301:**
 "This footwear supplier's lead time jumped from 21 to 45 days due to port congestion. The
@@ -55,12 +62,18 @@ confidence to 40%, and routes it for manual sizing instead of guessing."
 Switch to **Needs review** tab.
 
 "This is the part I think matters most: the agent never just acts silently. Anything
-below the confidence threshold — right now set at 70% — lands here with its reasoning
+below the confidence threshold — or flagged urgent — lands here with its reasoning
 spelled out. A planner can approve as-is, edit the quantity, or reject with a reason."
 
 Actually click **Approve edited** or **Reject** on one item.
 
-"And that threshold isn't hardcoded — it's this slider."
+"Notice this one's marked urgent — that's a separate signal from confidence. It means
+on-hand stock will run out before the next reorder arrives, which is exactly the moment
+in-store pickup promises would break and stores would need to pull from another location.
+I didn't build full order-routing for that — it's flagged so a human handles it, not
+silently auto-approved."
+
+"And the confidence threshold itself isn't hardcoded — it's this slider."
 
 Drag the sidebar slider from 0.70 to 0.75 live.
 
@@ -80,8 +93,10 @@ my workflow doc, even though it's not wired up in this prototype."
 
 "This is a prototype, not a production system — no auth, no real ERP integration, no
 persistence beyond the session, and the thresholds are hand-tuned against this dataset,
-not validated against real retail behavior. All of that's written up in the decisions
-README, along with the reasoning behind each design choice. Thanks for watching."
+not validated against real retail behavior. It also doesn't model per-store inventory or
+full fulfillment routing — that's a different system, so I flagged the signal that would
+trigger those workarounds instead of simulating them. All of that's written up in the
+decisions README, along with the reasoning behind each design choice. Thanks for watching."
 
 ---
 

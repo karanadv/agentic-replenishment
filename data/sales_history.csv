@@ -1,391 +1,781 @@
-week_number,week_start_date,sku_id,sku_name,category,units_sold,unit_price,promo_or_press_flag
-1,2026-01-05,APP-1042,Trail Runner Jacket,Apparel,35,95.0,0
-2,2026-01-12,APP-1042,Trail Runner Jacket,Apparel,30,95.0,0
-3,2026-01-19,APP-1042,Trail Runner Jacket,Apparel,38,95.0,0
-4,2026-01-26,APP-1042,Trail Runner Jacket,Apparel,39,95.0,0
-5,2026-02-02,APP-1042,Trail Runner Jacket,Apparel,27,95.0,0
-6,2026-02-09,APP-1042,Trail Runner Jacket,Apparel,30,95.0,0
-7,2026-02-16,APP-1042,Trail Runner Jacket,Apparel,37,95.0,0
-8,2026-02-23,APP-1042,Trail Runner Jacket,Apparel,35,95.0,0
-9,2026-03-02,APP-1042,Trail Runner Jacket,Apparel,37,95.0,0
-10,2026-03-09,APP-1042,Trail Runner Jacket,Apparel,34,95.0,0
-11,2026-03-16,APP-1042,Trail Runner Jacket,Apparel,42,95.0,0
-12,2026-03-23,APP-1042,Trail Runner Jacket,Apparel,42,95.0,0
-13,2026-03-30,APP-1042,Trail Runner Jacket,Apparel,39,95.0,0
-14,2026-04-06,APP-1042,Trail Runner Jacket,Apparel,44,95.0,0
-15,2026-04-13,APP-1042,Trail Runner Jacket,Apparel,42,95.0,0
-16,2026-04-20,APP-1042,Trail Runner Jacket,Apparel,36,95.0,0
-17,2026-04-27,APP-1042,Trail Runner Jacket,Apparel,42,95.0,0
-18,2026-05-04,APP-1042,Trail Runner Jacket,Apparel,36,95.0,0
-19,2026-05-11,APP-1042,Trail Runner Jacket,Apparel,45,95.0,0
-20,2026-05-18,APP-1042,Trail Runner Jacket,Apparel,41,95.0,0
-21,2026-05-25,APP-1042,Trail Runner Jacket,Apparel,41,95.0,0
-22,2026-06-01,APP-1042,Trail Runner Jacket,Apparel,39,95.0,0
-23,2026-06-08,APP-1042,Trail Runner Jacket,Apparel,49,95.0,0
-24,2026-06-15,APP-1042,Trail Runner Jacket,Apparel,168,95.0,1
-25,2026-06-22,APP-1042,Trail Runner Jacket,Apparel,164,95.0,1
-26,2026-06-29,APP-1042,Trail Runner Jacket,Apparel,168,95.0,1
-1,2026-01-05,APP-2210,Merino Base Layer,Apparel,25,48.0,0
-2,2026-01-12,APP-2210,Merino Base Layer,Apparel,25,48.0,0
-3,2026-01-19,APP-2210,Merino Base Layer,Apparel,25,48.0,0
-4,2026-01-26,APP-2210,Merino Base Layer,Apparel,25,48.0,0
-5,2026-02-02,APP-2210,Merino Base Layer,Apparel,31,48.0,0
-6,2026-02-09,APP-2210,Merino Base Layer,Apparel,23,48.0,0
-7,2026-02-16,APP-2210,Merino Base Layer,Apparel,23,48.0,0
-8,2026-02-23,APP-2210,Merino Base Layer,Apparel,23,48.0,0
-9,2026-03-02,APP-2210,Merino Base Layer,Apparel,27,48.0,0
-10,2026-03-09,APP-2210,Merino Base Layer,Apparel,29,48.0,0
-11,2026-03-16,APP-2210,Merino Base Layer,Apparel,26,48.0,0
-12,2026-03-23,APP-2210,Merino Base Layer,Apparel,24,48.0,0
-13,2026-03-30,APP-2210,Merino Base Layer,Apparel,24,48.0,0
-14,2026-04-06,APP-2210,Merino Base Layer,Apparel,29,48.0,0
-15,2026-04-13,APP-2210,Merino Base Layer,Apparel,29,48.0,0
-16,2026-04-20,APP-2210,Merino Base Layer,Apparel,29,48.0,0
-17,2026-04-27,APP-2210,Merino Base Layer,Apparel,25,48.0,0
-18,2026-05-04,APP-2210,Merino Base Layer,Apparel,29,48.0,0
-19,2026-05-11,APP-2210,Merino Base Layer,Apparel,28,48.0,0
-20,2026-05-18,APP-2210,Merino Base Layer,Apparel,29,48.0,0
-21,2026-05-25,APP-2210,Merino Base Layer,Apparel,32,48.0,0
-22,2026-06-01,APP-2210,Merino Base Layer,Apparel,30,48.0,0
-23,2026-06-08,APP-2210,Merino Base Layer,Apparel,31,48.0,0
-24,2026-06-15,APP-2210,Merino Base Layer,Apparel,30,48.0,0
-25,2026-06-22,APP-2210,Merino Base Layer,Apparel,31,48.0,0
-26,2026-06-29,APP-2210,Merino Base Layer,Apparel,32,48.0,0
-1,2026-01-05,APP-2255,Fleece Vest,Apparel,16,55.0,0
-2,2026-01-12,APP-2255,Fleece Vest,Apparel,18,55.0,0
-3,2026-01-19,APP-2255,Fleece Vest,Apparel,18,55.0,0
-4,2026-01-26,APP-2255,Fleece Vest,Apparel,18,55.0,0
-5,2026-02-02,APP-2255,Fleece Vest,Apparel,19,55.0,0
-6,2026-02-09,APP-2255,Fleece Vest,Apparel,24,55.0,0
-7,2026-02-16,APP-2255,Fleece Vest,Apparel,18,55.0,0
-8,2026-02-23,APP-2255,Fleece Vest,Apparel,23,55.0,0
-9,2026-03-02,APP-2255,Fleece Vest,Apparel,16,55.0,0
-10,2026-03-09,APP-2255,Fleece Vest,Apparel,20,55.0,0
-11,2026-03-16,APP-2255,Fleece Vest,Apparel,21,55.0,0
-12,2026-03-23,APP-2255,Fleece Vest,Apparel,23,55.0,0
-13,2026-03-30,APP-2255,Fleece Vest,Apparel,23,55.0,0
-14,2026-04-06,APP-2255,Fleece Vest,Apparel,24,55.0,0
-15,2026-04-13,APP-2255,Fleece Vest,Apparel,21,55.0,0
-16,2026-04-20,APP-2255,Fleece Vest,Apparel,21,55.0,0
-17,2026-04-27,APP-2255,Fleece Vest,Apparel,25,55.0,0
-18,2026-05-04,APP-2255,Fleece Vest,Apparel,22,55.0,0
-19,2026-05-11,APP-2255,Fleece Vest,Apparel,19,55.0,0
-20,2026-05-18,APP-2255,Fleece Vest,Apparel,20,55.0,0
-21,2026-05-25,APP-2255,Fleece Vest,Apparel,21,55.0,0
-22,2026-06-01,APP-2255,Fleece Vest,Apparel,25,55.0,0
-23,2026-06-08,APP-2255,Fleece Vest,Apparel,24,55.0,0
-24,2026-06-15,APP-2255,Fleece Vest,Apparel,26,55.0,0
-25,2026-06-22,APP-2255,Fleece Vest,Apparel,23,55.0,0
-26,2026-06-29,APP-2255,Fleece Vest,Apparel,25,55.0,0
-1,2026-01-05,FTW-3301,Trail Runner Shoe - Men's,Footwear,44,110.0,0
-2,2026-01-12,FTW-3301,Trail Runner Shoe - Men's,Footwear,39,110.0,0
-3,2026-01-19,FTW-3301,Trail Runner Shoe - Men's,Footwear,44,110.0,0
-4,2026-01-26,FTW-3301,Trail Runner Shoe - Men's,Footwear,39,110.0,0
-5,2026-02-02,FTW-3301,Trail Runner Shoe - Men's,Footwear,40,110.0,0
-6,2026-02-09,FTW-3301,Trail Runner Shoe - Men's,Footwear,41,110.0,0
-7,2026-02-16,FTW-3301,Trail Runner Shoe - Men's,Footwear,37,110.0,0
-8,2026-02-23,FTW-3301,Trail Runner Shoe - Men's,Footwear,46,110.0,0
-9,2026-03-02,FTW-3301,Trail Runner Shoe - Men's,Footwear,42,110.0,0
-10,2026-03-09,FTW-3301,Trail Runner Shoe - Men's,Footwear,45,110.0,0
-11,2026-03-16,FTW-3301,Trail Runner Shoe - Men's,Footwear,48,110.0,0
-12,2026-03-23,FTW-3301,Trail Runner Shoe - Men's,Footwear,48,110.0,0
-13,2026-03-30,FTW-3301,Trail Runner Shoe - Men's,Footwear,50,110.0,0
-14,2026-04-06,FTW-3301,Trail Runner Shoe - Men's,Footwear,46,110.0,0
-15,2026-04-13,FTW-3301,Trail Runner Shoe - Men's,Footwear,44,110.0,0
-16,2026-04-20,FTW-3301,Trail Runner Shoe - Men's,Footwear,47,110.0,0
-17,2026-04-27,FTW-3301,Trail Runner Shoe - Men's,Footwear,38,110.0,0
-18,2026-05-04,FTW-3301,Trail Runner Shoe - Men's,Footwear,40,110.0,0
-19,2026-05-11,FTW-3301,Trail Runner Shoe - Men's,Footwear,41,110.0,0
-20,2026-05-18,FTW-3301,Trail Runner Shoe - Men's,Footwear,43,110.0,0
-21,2026-05-25,FTW-3301,Trail Runner Shoe - Men's,Footwear,52,110.0,0
-22,2026-06-01,FTW-3301,Trail Runner Shoe - Men's,Footwear,45,110.0,0
-23,2026-06-08,FTW-3301,Trail Runner Shoe - Men's,Footwear,48,110.0,0
-24,2026-06-15,FTW-3301,Trail Runner Shoe - Men's,Footwear,59,110.0,0
-25,2026-06-22,FTW-3301,Trail Runner Shoe - Men's,Footwear,49,110.0,0
-26,2026-06-29,FTW-3301,Trail Runner Shoe - Men's,Footwear,56,110.0,0
-1,2026-01-05,FTW-3302,Trail Runner Shoe - Women's,Footwear,33,110.0,0
-2,2026-01-12,FTW-3302,Trail Runner Shoe - Women's,Footwear,36,110.0,0
-3,2026-01-19,FTW-3302,Trail Runner Shoe - Women's,Footwear,33,110.0,0
-4,2026-01-26,FTW-3302,Trail Runner Shoe - Women's,Footwear,37,110.0,0
-5,2026-02-02,FTW-3302,Trail Runner Shoe - Women's,Footwear,42,110.0,0
-6,2026-02-09,FTW-3302,Trail Runner Shoe - Women's,Footwear,31,110.0,0
-7,2026-02-16,FTW-3302,Trail Runner Shoe - Women's,Footwear,41,110.0,0
-8,2026-02-23,FTW-3302,Trail Runner Shoe - Women's,Footwear,41,110.0,0
-9,2026-03-02,FTW-3302,Trail Runner Shoe - Women's,Footwear,37,110.0,0
-10,2026-03-09,FTW-3302,Trail Runner Shoe - Women's,Footwear,34,110.0,0
-11,2026-03-16,FTW-3302,Trail Runner Shoe - Women's,Footwear,41,110.0,0
-12,2026-03-23,FTW-3302,Trail Runner Shoe - Women's,Footwear,39,110.0,0
-13,2026-03-30,FTW-3302,Trail Runner Shoe - Women's,Footwear,43,110.0,0
-14,2026-04-06,FTW-3302,Trail Runner Shoe - Women's,Footwear,42,110.0,0
-15,2026-04-13,FTW-3302,Trail Runner Shoe - Women's,Footwear,51,110.0,0
-16,2026-04-20,FTW-3302,Trail Runner Shoe - Women's,Footwear,42,110.0,0
-17,2026-04-27,FTW-3302,Trail Runner Shoe - Women's,Footwear,38,110.0,0
-18,2026-05-04,FTW-3302,Trail Runner Shoe - Women's,Footwear,45,110.0,0
-19,2026-05-11,FTW-3302,Trail Runner Shoe - Women's,Footwear,45,110.0,0
-20,2026-05-18,FTW-3302,Trail Runner Shoe - Women's,Footwear,52,110.0,0
-21,2026-05-25,FTW-3302,Trail Runner Shoe - Women's,Footwear,50,110.0,0
-22,2026-06-01,FTW-3302,Trail Runner Shoe - Women's,Footwear,47,110.0,0
-23,2026-06-08,FTW-3302,Trail Runner Shoe - Women's,Footwear,54,110.0,0
-24,2026-06-15,FTW-3302,Trail Runner Shoe - Women's,Footwear,40,110.0,0
-25,2026-06-22,FTW-3302,Trail Runner Shoe - Women's,Footwear,43,110.0,0
-26,2026-06-29,FTW-3302,Trail Runner Shoe - Women's,Footwear,42,110.0,0
-1,2026-01-05,FTW-3350,Hiking Sandal,Footwear,15,65.0,0
-2,2026-01-12,FTW-3350,Hiking Sandal,Footwear,13,65.0,0
-3,2026-01-19,FTW-3350,Hiking Sandal,Footwear,17,65.0,0
-4,2026-01-26,FTW-3350,Hiking Sandal,Footwear,15,65.0,0
-5,2026-02-02,FTW-3350,Hiking Sandal,Footwear,13,65.0,0
-6,2026-02-09,FTW-3350,Hiking Sandal,Footwear,14,65.0,0
-7,2026-02-16,FTW-3350,Hiking Sandal,Footwear,17,65.0,0
-8,2026-02-23,FTW-3350,Hiking Sandal,Footwear,18,65.0,0
-9,2026-03-02,FTW-3350,Hiking Sandal,Footwear,21,65.0,0
-10,2026-03-09,FTW-3350,Hiking Sandal,Footwear,23,65.0,0
-11,2026-03-16,FTW-3350,Hiking Sandal,Footwear,18,65.0,0
-12,2026-03-23,FTW-3350,Hiking Sandal,Footwear,15,65.0,0
-13,2026-03-30,FTW-3350,Hiking Sandal,Footwear,13,65.0,0
-14,2026-04-06,FTW-3350,Hiking Sandal,Footwear,18,65.0,0
-15,2026-04-13,FTW-3350,Hiking Sandal,Footwear,16,65.0,0
-16,2026-04-20,FTW-3350,Hiking Sandal,Footwear,17,65.0,0
-17,2026-04-27,FTW-3350,Hiking Sandal,Footwear,17,65.0,0
-18,2026-05-04,FTW-3350,Hiking Sandal,Footwear,18,65.0,0
-19,2026-05-11,FTW-3350,Hiking Sandal,Footwear,21,65.0,0
-20,2026-05-18,FTW-3350,Hiking Sandal,Footwear,19,65.0,0
-21,2026-05-25,FTW-3350,Hiking Sandal,Footwear,18,65.0,0
-22,2026-06-01,FTW-3350,Hiking Sandal,Footwear,17,65.0,0
-23,2026-06-08,FTW-3350,Hiking Sandal,Footwear,15,65.0,0
-24,2026-06-15,FTW-3350,Hiking Sandal,Footwear,18,65.0,0
-25,2026-06-22,FTW-3350,Hiking Sandal,Footwear,19,65.0,0
-26,2026-06-29,FTW-3350,Hiking Sandal,Footwear,24,65.0,0
-1,2026-01-05,EQP-4410,45L Backpack,Equipment,13,145.0,0
-2,2026-01-12,EQP-4410,45L Backpack,Equipment,14,145.0,0
-3,2026-01-19,EQP-4410,45L Backpack,Equipment,12,145.0,0
-4,2026-01-26,EQP-4410,45L Backpack,Equipment,11,145.0,0
-5,2026-02-02,EQP-4410,45L Backpack,Equipment,12,145.0,0
-6,2026-02-09,EQP-4410,45L Backpack,Equipment,12,145.0,0
-7,2026-02-16,EQP-4410,45L Backpack,Equipment,17,145.0,0
-8,2026-02-23,EQP-4410,45L Backpack,Equipment,12,145.0,0
-9,2026-03-02,EQP-4410,45L Backpack,Equipment,15,145.0,0
-10,2026-03-09,EQP-4410,45L Backpack,Equipment,12,145.0,0
-11,2026-03-16,EQP-4410,45L Backpack,Equipment,16,145.0,0
-12,2026-03-23,EQP-4410,45L Backpack,Equipment,15,145.0,0
-13,2026-03-30,EQP-4410,45L Backpack,Equipment,14,145.0,0
-14,2026-04-06,EQP-4410,45L Backpack,Equipment,14,145.0,0
-15,2026-04-13,EQP-4410,45L Backpack,Equipment,13,145.0,0
-16,2026-04-20,EQP-4410,45L Backpack,Equipment,15,145.0,0
-17,2026-04-27,EQP-4410,45L Backpack,Equipment,14,145.0,0
-18,2026-05-04,EQP-4410,45L Backpack,Equipment,13,145.0,0
-19,2026-05-11,EQP-4410,45L Backpack,Equipment,13,145.0,0
-20,2026-05-18,EQP-4410,45L Backpack,Equipment,16,145.0,0
-21,2026-05-25,EQP-4410,45L Backpack,Equipment,18,145.0,0
-22,2026-06-01,EQP-4410,45L Backpack,Equipment,16,145.0,0
-23,2026-06-08,EQP-4410,45L Backpack,Equipment,15,145.0,0
-24,2026-06-15,EQP-4410,45L Backpack,Equipment,16,145.0,0
-25,2026-06-22,EQP-4410,45L Backpack,Equipment,18,145.0,0
-26,2026-06-29,EQP-4410,45L Backpack,Equipment,17,145.0,0
-1,2026-01-05,EQP-4455,2-Person Tent,Equipment,8,220.0,0
-2,2026-01-12,EQP-4455,2-Person Tent,Equipment,9,220.0,0
-3,2026-01-19,EQP-4455,2-Person Tent,Equipment,9,220.0,0
-4,2026-01-26,EQP-4455,2-Person Tent,Equipment,10,220.0,0
-5,2026-02-02,EQP-4455,2-Person Tent,Equipment,9,220.0,0
-6,2026-02-09,EQP-4455,2-Person Tent,Equipment,7,220.0,0
-7,2026-02-16,EQP-4455,2-Person Tent,Equipment,7,220.0,0
-8,2026-02-23,EQP-4455,2-Person Tent,Equipment,10,220.0,0
-9,2026-03-02,EQP-4455,2-Person Tent,Equipment,11,220.0,0
-10,2026-03-09,EQP-4455,2-Person Tent,Equipment,9,220.0,0
-11,2026-03-16,EQP-4455,2-Person Tent,Equipment,9,220.0,0
-12,2026-03-23,EQP-4455,2-Person Tent,Equipment,11,220.0,0
-13,2026-03-30,EQP-4455,2-Person Tent,Equipment,8,220.0,0
-14,2026-04-06,EQP-4455,2-Person Tent,Equipment,8,220.0,0
-15,2026-04-13,EQP-4455,2-Person Tent,Equipment,10,220.0,0
-16,2026-04-20,EQP-4455,2-Person Tent,Equipment,9,220.0,0
-17,2026-04-27,EQP-4455,2-Person Tent,Equipment,10,220.0,0
-18,2026-05-04,EQP-4455,2-Person Tent,Equipment,9,220.0,0
-19,2026-05-11,EQP-4455,2-Person Tent,Equipment,10,220.0,0
-20,2026-05-18,EQP-4455,2-Person Tent,Equipment,11,220.0,0
-21,2026-05-25,EQP-4455,2-Person Tent,Equipment,10,220.0,0
-22,2026-06-01,EQP-4455,2-Person Tent,Equipment,11,220.0,0
-23,2026-06-08,EQP-4455,2-Person Tent,Equipment,8,220.0,0
-24,2026-06-15,EQP-4455,2-Person Tent,Equipment,10,220.0,0
-25,2026-06-22,EQP-4455,2-Person Tent,Equipment,9,220.0,0
-26,2026-06-29,EQP-4455,2-Person Tent,Equipment,9,220.0,0
-1,2026-01-05,EQP-4478,Trekking Poles (Pair),Equipment,15,49.0,0
-2,2026-01-12,EQP-4478,Trekking Poles (Pair),Equipment,17,49.0,0
-3,2026-01-19,EQP-4478,Trekking Poles (Pair),Equipment,19,49.0,0
-4,2026-01-26,EQP-4478,Trekking Poles (Pair),Equipment,15,49.0,0
-5,2026-02-02,EQP-4478,Trekking Poles (Pair),Equipment,18,49.0,0
-6,2026-02-09,EQP-4478,Trekking Poles (Pair),Equipment,17,49.0,0
-7,2026-02-16,EQP-4478,Trekking Poles (Pair),Equipment,18,49.0,0
-8,2026-02-23,EQP-4478,Trekking Poles (Pair),Equipment,21,49.0,0
-9,2026-03-02,EQP-4478,Trekking Poles (Pair),Equipment,20,49.0,0
-10,2026-03-09,EQP-4478,Trekking Poles (Pair),Equipment,22,49.0,0
-11,2026-03-16,EQP-4478,Trekking Poles (Pair),Equipment,19,49.0,0
-12,2026-03-23,EQP-4478,Trekking Poles (Pair),Equipment,18,49.0,0
-13,2026-03-30,EQP-4478,Trekking Poles (Pair),Equipment,19,49.0,0
-14,2026-04-06,EQP-4478,Trekking Poles (Pair),Equipment,20,49.0,0
-15,2026-04-13,EQP-4478,Trekking Poles (Pair),Equipment,20,49.0,0
-16,2026-04-20,EQP-4478,Trekking Poles (Pair),Equipment,17,49.0,0
-17,2026-04-27,EQP-4478,Trekking Poles (Pair),Equipment,20,49.0,0
-18,2026-05-04,EQP-4478,Trekking Poles (Pair),Equipment,21,49.0,0
-19,2026-05-11,EQP-4478,Trekking Poles (Pair),Equipment,27,49.0,0
-20,2026-05-18,EQP-4478,Trekking Poles (Pair),Equipment,25,49.0,0
-21,2026-05-25,EQP-4478,Trekking Poles (Pair),Equipment,19,49.0,0
-22,2026-06-01,EQP-4478,Trekking Poles (Pair),Equipment,20,49.0,0
-23,2026-06-08,EQP-4478,Trekking Poles (Pair),Equipment,18,49.0,0
-24,2026-06-15,EQP-4478,Trekking Poles (Pair),Equipment,20,49.0,0
-25,2026-06-22,EQP-4478,Trekking Poles (Pair),Equipment,22,49.0,0
-26,2026-06-29,EQP-4478,Trekking Poles (Pair),Equipment,25,49.0,0
-1,2026-01-05,ACC-9901,Wool Socks (3-pack),Accessory,45,22.0,0
-2,2026-01-12,ACC-9901,Wool Socks (3-pack),Accessory,46,22.0,0
-3,2026-01-19,ACC-9901,Wool Socks (3-pack),Accessory,38,22.0,0
-4,2026-01-26,ACC-9901,Wool Socks (3-pack),Accessory,50,22.0,0
-5,2026-02-02,ACC-9901,Wool Socks (3-pack),Accessory,45,22.0,0
-6,2026-02-09,ACC-9901,Wool Socks (3-pack),Accessory,49,22.0,0
-7,2026-02-16,ACC-9901,Wool Socks (3-pack),Accessory,47,22.0,0
-8,2026-02-23,ACC-9901,Wool Socks (3-pack),Accessory,53,22.0,0
-9,2026-03-02,ACC-9901,Wool Socks (3-pack),Accessory,43,22.0,0
-10,2026-03-09,ACC-9901,Wool Socks (3-pack),Accessory,45,22.0,0
-11,2026-03-16,ACC-9901,Wool Socks (3-pack),Accessory,69,22.0,0
-12,2026-03-23,ACC-9901,Wool Socks (3-pack),Accessory,47,22.0,0
-13,2026-03-30,ACC-9901,Wool Socks (3-pack),Accessory,49,22.0,0
-14,2026-04-06,ACC-9901,Wool Socks (3-pack),Accessory,69,22.0,0
-15,2026-04-13,ACC-9901,Wool Socks (3-pack),Accessory,77,22.0,0
-16,2026-04-20,ACC-9901,Wool Socks (3-pack),Accessory,50,22.0,0
-17,2026-04-27,ACC-9901,Wool Socks (3-pack),Accessory,56,22.0,0
-18,2026-05-04,ACC-9901,Wool Socks (3-pack),Accessory,61,22.0,0
-19,2026-05-11,ACC-9901,Wool Socks (3-pack),Accessory,72,22.0,0
-20,2026-05-18,ACC-9901,Wool Socks (3-pack),Accessory,53,22.0,0
-21,2026-05-25,ACC-9901,Wool Socks (3-pack),Accessory,59,22.0,0
-22,2026-06-01,ACC-9901,Wool Socks (3-pack),Accessory,67,22.0,0
-23,2026-06-08,ACC-9901,Wool Socks (3-pack),Accessory,65,22.0,0
-24,2026-06-15,ACC-9901,Wool Socks (3-pack),Accessory,59,22.0,0
-25,2026-06-22,ACC-9901,Wool Socks (3-pack),Accessory,62,22.0,0
-26,2026-06-29,ACC-9901,Wool Socks (3-pack),Accessory,53,22.0,0
-1,2026-01-05,ACC-9915,Insulated Water Bottle,Accessory,29,19.0,0
-2,2026-01-12,ACC-9915,Insulated Water Bottle,Accessory,29,19.0,0
-3,2026-01-19,ACC-9915,Insulated Water Bottle,Accessory,31,19.0,0
-4,2026-01-26,ACC-9915,Insulated Water Bottle,Accessory,29,19.0,0
-5,2026-02-02,ACC-9915,Insulated Water Bottle,Accessory,33,19.0,0
-6,2026-02-09,ACC-9915,Insulated Water Bottle,Accessory,35,19.0,0
-7,2026-02-16,ACC-9915,Insulated Water Bottle,Accessory,32,19.0,0
-8,2026-02-23,ACC-9915,Insulated Water Bottle,Accessory,33,19.0,0
-9,2026-03-02,ACC-9915,Insulated Water Bottle,Accessory,33,19.0,0
-10,2026-03-09,ACC-9915,Insulated Water Bottle,Accessory,33,19.0,0
-11,2026-03-16,ACC-9915,Insulated Water Bottle,Accessory,30,19.0,0
-12,2026-03-23,ACC-9915,Insulated Water Bottle,Accessory,35,19.0,0
-13,2026-03-30,ACC-9915,Insulated Water Bottle,Accessory,33,19.0,0
-14,2026-04-06,ACC-9915,Insulated Water Bottle,Accessory,43,19.0,0
-15,2026-04-13,ACC-9915,Insulated Water Bottle,Accessory,41,19.0,0
-16,2026-04-20,ACC-9915,Insulated Water Bottle,Accessory,36,19.0,0
-17,2026-04-27,ACC-9915,Insulated Water Bottle,Accessory,32,19.0,0
-18,2026-05-04,ACC-9915,Insulated Water Bottle,Accessory,31,19.0,0
-19,2026-05-11,ACC-9915,Insulated Water Bottle,Accessory,41,19.0,0
-20,2026-05-18,ACC-9915,Insulated Water Bottle,Accessory,37,19.0,0
-21,2026-05-25,ACC-9915,Insulated Water Bottle,Accessory,38,19.0,0
-22,2026-06-01,ACC-9915,Insulated Water Bottle,Accessory,29,19.0,0
-23,2026-06-08,ACC-9915,Insulated Water Bottle,Accessory,41,19.0,0
-24,2026-06-15,ACC-9915,Insulated Water Bottle,Accessory,39,19.0,0
-25,2026-06-22,ACC-9915,Insulated Water Bottle,Accessory,33,19.0,0
-26,2026-06-29,ACC-9915,Insulated Water Bottle,Accessory,36,19.0,0
-1,2026-01-05,ACC-9930,Headlamp,Accessory,22,28.0,0
-2,2026-01-12,ACC-9930,Headlamp,Accessory,22,28.0,0
-3,2026-01-19,ACC-9930,Headlamp,Accessory,21,28.0,0
-4,2026-01-26,ACC-9930,Headlamp,Accessory,22,28.0,0
-5,2026-02-02,ACC-9930,Headlamp,Accessory,22,28.0,0
-6,2026-02-09,ACC-9930,Headlamp,Accessory,23,28.0,0
-7,2026-02-16,ACC-9930,Headlamp,Accessory,27,28.0,0
-8,2026-02-23,ACC-9930,Headlamp,Accessory,16,28.0,0
-9,2026-03-02,ACC-9930,Headlamp,Accessory,23,28.0,0
-10,2026-03-09,ACC-9930,Headlamp,Accessory,24,28.0,0
-11,2026-03-16,ACC-9930,Headlamp,Accessory,25,28.0,0
-12,2026-03-23,ACC-9930,Headlamp,Accessory,23,28.0,0
-13,2026-03-30,ACC-9930,Headlamp,Accessory,19,28.0,0
-14,2026-04-06,ACC-9930,Headlamp,Accessory,26,28.0,0
-15,2026-04-13,ACC-9930,Headlamp,Accessory,30,28.0,0
-16,2026-04-20,ACC-9930,Headlamp,Accessory,21,28.0,0
-17,2026-04-27,ACC-9930,Headlamp,Accessory,28,28.0,0
-18,2026-05-04,ACC-9930,Headlamp,Accessory,25,28.0,0
-19,2026-05-11,ACC-9930,Headlamp,Accessory,26,28.0,0
-20,2026-05-18,ACC-9930,Headlamp,Accessory,23,28.0,0
-21,2026-05-25,ACC-9930,Headlamp,Accessory,25,28.0,0
-22,2026-06-01,ACC-9930,Headlamp,Accessory,31,28.0,0
-23,2026-06-08,ACC-9930,Headlamp,Accessory,29,28.0,0
-24,2026-06-15,ACC-9930,Headlamp,Accessory,33,28.0,0
-25,2026-06-22,ACC-9930,Headlamp,Accessory,31,28.0,0
-26,2026-06-29,ACC-9930,Headlamp,Accessory,29,28.0,0
-1,2026-01-05,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-2,2026-01-12,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-3,2026-01-19,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-4,2026-01-26,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-5,2026-02-02,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-6,2026-02-09,ACC-9981,"Replacement Buckle, Blue",Accessory,1,6.0,0
-7,2026-02-16,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-8,2026-02-23,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-9,2026-03-02,ACC-9981,"Replacement Buckle, Blue",Accessory,1,6.0,0
-10,2026-03-09,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-11,2026-03-16,ACC-9981,"Replacement Buckle, Blue",Accessory,1,6.0,0
-12,2026-03-23,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-13,2026-03-30,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-14,2026-04-06,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-15,2026-04-13,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-16,2026-04-20,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-17,2026-04-27,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-18,2026-05-04,ACC-9981,"Replacement Buckle, Blue",Accessory,1,6.0,0
-19,2026-05-11,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-20,2026-05-18,ACC-9981,"Replacement Buckle, Blue",Accessory,2,6.0,0
-21,2026-05-25,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-22,2026-06-01,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-23,2026-06-08,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-24,2026-06-15,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-25,2026-06-22,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-26,2026-06-29,ACC-9981,"Replacement Buckle, Blue",Accessory,0,6.0,0
-1,2026-01-05,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-2,2026-01-12,ACC-9982,"Replacement Buckle, Black",Accessory,2,6.0,0
-3,2026-01-19,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-4,2026-01-26,ACC-9982,"Replacement Buckle, Black",Accessory,2,6.0,0
-5,2026-02-02,ACC-9982,"Replacement Buckle, Black",Accessory,1,6.0,0
-6,2026-02-09,ACC-9982,"Replacement Buckle, Black",Accessory,2,6.0,0
-7,2026-02-16,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-8,2026-02-23,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-9,2026-03-02,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-10,2026-03-09,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-11,2026-03-16,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-12,2026-03-23,ACC-9982,"Replacement Buckle, Black",Accessory,3,6.0,0
-13,2026-03-30,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-14,2026-04-06,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-15,2026-04-13,ACC-9982,"Replacement Buckle, Black",Accessory,2,6.0,0
-16,2026-04-20,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-17,2026-04-27,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-18,2026-05-04,ACC-9982,"Replacement Buckle, Black",Accessory,1,6.0,0
-19,2026-05-11,ACC-9982,"Replacement Buckle, Black",Accessory,2,6.0,0
-20,2026-05-18,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-21,2026-05-25,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-22,2026-06-01,ACC-9982,"Replacement Buckle, Black",Accessory,1,6.0,0
-23,2026-06-08,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-24,2026-06-15,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-25,2026-06-22,ACC-9982,"Replacement Buckle, Black",Accessory,0,6.0,0
-26,2026-06-29,ACC-9982,"Replacement Buckle, Black",Accessory,1,6.0,0
-1,2026-01-05,APP-2299,Rain Shell,Apparel,13,85.0,0
-2,2026-01-12,APP-2299,Rain Shell,Apparel,14,85.0,0
-3,2026-01-19,APP-2299,Rain Shell,Apparel,15,85.0,0
-4,2026-01-26,APP-2299,Rain Shell,Apparel,16,85.0,0
-5,2026-02-02,APP-2299,Rain Shell,Apparel,14,85.0,0
-6,2026-02-09,APP-2299,Rain Shell,Apparel,16,85.0,0
-7,2026-02-16,APP-2299,Rain Shell,Apparel,15,85.0,0
-8,2026-02-23,APP-2299,Rain Shell,Apparel,15,85.0,0
-9,2026-03-02,APP-2299,Rain Shell,Apparel,17,85.0,0
-10,2026-03-09,APP-2299,Rain Shell,Apparel,12,85.0,0
-11,2026-03-16,APP-2299,Rain Shell,Apparel,14,85.0,0
-12,2026-03-23,APP-2299,Rain Shell,Apparel,13,85.0,0
-13,2026-03-30,APP-2299,Rain Shell,Apparel,12,85.0,0
-14,2026-04-06,APP-2299,Rain Shell,Apparel,15,85.0,0
-15,2026-04-13,APP-2299,Rain Shell,Apparel,18,85.0,0
-16,2026-04-20,APP-2299,Rain Shell,Apparel,16,85.0,0
-17,2026-04-27,APP-2299,Rain Shell,Apparel,17,85.0,0
-18,2026-05-04,APP-2299,Rain Shell,Apparel,19,85.0,0
-19,2026-05-11,APP-2299,Rain Shell,Apparel,20,85.0,0
-20,2026-05-18,APP-2299,Rain Shell,Apparel,17,85.0,0
-21,2026-05-25,APP-2299,Rain Shell,Apparel,20,85.0,0
-22,2026-06-01,APP-2299,Rain Shell,Apparel,18,85.0,0
-23,2026-06-08,APP-2299,Rain Shell,Apparel,16,85.0,0
-24,2026-06-15,APP-2299,Rain Shell,Apparel,17,85.0,0
-25,2026-06-22,APP-2299,Rain Shell,Apparel,15,85.0,0
-26,2026-06-29,APP-2299,Rain Shell,Apparel,16,85.0,0
+week_number,week_start_date,sku_id,sku_name,category,channel,units_sold,unit_price,promo_or_press_flag
+1,2026-01-05,APP-1042,Trail Runner Jacket,Apparel,online,14,95.0,0
+1,2026-01-05,APP-1042,Trail Runner Jacket,Apparel,store,21,95.0,0
+2,2026-01-12,APP-1042,Trail Runner Jacket,Apparel,online,19,95.0,0
+2,2026-01-12,APP-1042,Trail Runner Jacket,Apparel,store,19,95.0,0
+3,2026-01-19,APP-1042,Trail Runner Jacket,Apparel,online,11,95.0,0
+3,2026-01-19,APP-1042,Trail Runner Jacket,Apparel,store,16,95.0,0
+4,2026-01-26,APP-1042,Trail Runner Jacket,Apparel,online,16,95.0,0
+4,2026-01-26,APP-1042,Trail Runner Jacket,Apparel,store,20,95.0,0
+5,2026-02-02,APP-1042,Trail Runner Jacket,Apparel,online,15,95.0,0
+5,2026-02-02,APP-1042,Trail Runner Jacket,Apparel,store,21,95.0,0
+6,2026-02-09,APP-1042,Trail Runner Jacket,Apparel,online,19,95.0,0
+6,2026-02-09,APP-1042,Trail Runner Jacket,Apparel,store,21,95.0,0
+7,2026-02-16,APP-1042,Trail Runner Jacket,Apparel,online,18,95.0,0
+7,2026-02-16,APP-1042,Trail Runner Jacket,Apparel,store,19,95.0,0
+8,2026-02-23,APP-1042,Trail Runner Jacket,Apparel,online,16,95.0,0
+8,2026-02-23,APP-1042,Trail Runner Jacket,Apparel,store,23,95.0,0
+9,2026-03-02,APP-1042,Trail Runner Jacket,Apparel,online,16,95.0,0
+9,2026-03-02,APP-1042,Trail Runner Jacket,Apparel,store,23,95.0,0
+10,2026-03-09,APP-1042,Trail Runner Jacket,Apparel,online,19,95.0,0
+10,2026-03-09,APP-1042,Trail Runner Jacket,Apparel,store,23,95.0,0
+11,2026-03-16,APP-1042,Trail Runner Jacket,Apparel,online,16,95.0,0
+11,2026-03-16,APP-1042,Trail Runner Jacket,Apparel,store,21,95.0,0
+12,2026-03-23,APP-1042,Trail Runner Jacket,Apparel,online,20,95.0,0
+12,2026-03-23,APP-1042,Trail Runner Jacket,Apparel,store,24,95.0,0
+13,2026-03-30,APP-1042,Trail Runner Jacket,Apparel,online,16,95.0,0
+13,2026-03-30,APP-1042,Trail Runner Jacket,Apparel,store,21,95.0,0
+14,2026-04-06,APP-1042,Trail Runner Jacket,Apparel,online,20,95.0,0
+14,2026-04-06,APP-1042,Trail Runner Jacket,Apparel,store,22,95.0,0
+15,2026-04-13,APP-1042,Trail Runner Jacket,Apparel,online,19,95.0,0
+15,2026-04-13,APP-1042,Trail Runner Jacket,Apparel,store,22,95.0,0
+16,2026-04-20,APP-1042,Trail Runner Jacket,Apparel,online,22,95.0,0
+16,2026-04-20,APP-1042,Trail Runner Jacket,Apparel,store,28,95.0,0
+17,2026-04-27,APP-1042,Trail Runner Jacket,Apparel,online,16,95.0,0
+17,2026-04-27,APP-1042,Trail Runner Jacket,Apparel,store,22,95.0,0
+18,2026-05-04,APP-1042,Trail Runner Jacket,Apparel,online,22,95.0,0
+18,2026-05-04,APP-1042,Trail Runner Jacket,Apparel,store,22,95.0,0
+19,2026-05-11,APP-1042,Trail Runner Jacket,Apparel,online,17,95.0,0
+19,2026-05-11,APP-1042,Trail Runner Jacket,Apparel,store,23,95.0,0
+20,2026-05-18,APP-1042,Trail Runner Jacket,Apparel,online,18,95.0,0
+20,2026-05-18,APP-1042,Trail Runner Jacket,Apparel,store,19,95.0,0
+21,2026-05-25,APP-1042,Trail Runner Jacket,Apparel,online,22,95.0,0
+21,2026-05-25,APP-1042,Trail Runner Jacket,Apparel,store,24,95.0,0
+22,2026-06-01,APP-1042,Trail Runner Jacket,Apparel,online,18,95.0,0
+22,2026-06-01,APP-1042,Trail Runner Jacket,Apparel,store,21,95.0,0
+23,2026-06-08,APP-1042,Trail Runner Jacket,Apparel,online,20,95.0,0
+23,2026-06-08,APP-1042,Trail Runner Jacket,Apparel,store,23,95.0,0
+24,2026-06-15,APP-1042,Trail Runner Jacket,Apparel,online,150,95.0,1
+24,2026-06-15,APP-1042,Trail Runner Jacket,Apparel,store,38,95.0,1
+25,2026-06-22,APP-1042,Trail Runner Jacket,Apparel,online,141,95.0,1
+25,2026-06-22,APP-1042,Trail Runner Jacket,Apparel,store,35,95.0,1
+26,2026-06-29,APP-1042,Trail Runner Jacket,Apparel,online,150,95.0,1
+26,2026-06-29,APP-1042,Trail Runner Jacket,Apparel,store,38,95.0,1
+1,2026-01-05,APP-2210,Merino Base Layer,Apparel,online,11,48.0,0
+1,2026-01-05,APP-2210,Merino Base Layer,Apparel,store,13,48.0,0
+2,2026-01-12,APP-2210,Merino Base Layer,Apparel,online,10,48.0,0
+2,2026-01-12,APP-2210,Merino Base Layer,Apparel,store,15,48.0,0
+3,2026-01-19,APP-2210,Merino Base Layer,Apparel,online,10,48.0,0
+3,2026-01-19,APP-2210,Merino Base Layer,Apparel,store,13,48.0,0
+4,2026-01-26,APP-2210,Merino Base Layer,Apparel,online,10,48.0,0
+4,2026-01-26,APP-2210,Merino Base Layer,Apparel,store,12,48.0,0
+5,2026-02-02,APP-2210,Merino Base Layer,Apparel,online,12,48.0,0
+5,2026-02-02,APP-2210,Merino Base Layer,Apparel,store,17,48.0,0
+6,2026-02-09,APP-2210,Merino Base Layer,Apparel,online,11,48.0,0
+6,2026-02-09,APP-2210,Merino Base Layer,Apparel,store,17,48.0,0
+7,2026-02-16,APP-2210,Merino Base Layer,Apparel,online,11,48.0,0
+7,2026-02-16,APP-2210,Merino Base Layer,Apparel,store,13,48.0,0
+8,2026-02-23,APP-2210,Merino Base Layer,Apparel,online,13,48.0,0
+8,2026-02-23,APP-2210,Merino Base Layer,Apparel,store,14,48.0,0
+9,2026-03-02,APP-2210,Merino Base Layer,Apparel,online,12,48.0,0
+9,2026-03-02,APP-2210,Merino Base Layer,Apparel,store,16,48.0,0
+10,2026-03-09,APP-2210,Merino Base Layer,Apparel,online,12,48.0,0
+10,2026-03-09,APP-2210,Merino Base Layer,Apparel,store,12,48.0,0
+11,2026-03-16,APP-2210,Merino Base Layer,Apparel,online,10,48.0,0
+11,2026-03-16,APP-2210,Merino Base Layer,Apparel,store,15,48.0,0
+12,2026-03-23,APP-2210,Merino Base Layer,Apparel,online,10,48.0,0
+12,2026-03-23,APP-2210,Merino Base Layer,Apparel,store,13,48.0,0
+13,2026-03-30,APP-2210,Merino Base Layer,Apparel,online,13,48.0,0
+13,2026-03-30,APP-2210,Merino Base Layer,Apparel,store,15,48.0,0
+14,2026-04-06,APP-2210,Merino Base Layer,Apparel,online,13,48.0,0
+14,2026-04-06,APP-2210,Merino Base Layer,Apparel,store,16,48.0,0
+15,2026-04-13,APP-2210,Merino Base Layer,Apparel,online,13,48.0,0
+15,2026-04-13,APP-2210,Merino Base Layer,Apparel,store,15,48.0,0
+16,2026-04-20,APP-2210,Merino Base Layer,Apparel,online,12,48.0,0
+16,2026-04-20,APP-2210,Merino Base Layer,Apparel,store,14,48.0,0
+17,2026-04-27,APP-2210,Merino Base Layer,Apparel,online,11,48.0,0
+17,2026-04-27,APP-2210,Merino Base Layer,Apparel,store,14,48.0,0
+18,2026-05-04,APP-2210,Merino Base Layer,Apparel,online,11,48.0,0
+18,2026-05-04,APP-2210,Merino Base Layer,Apparel,store,16,48.0,0
+19,2026-05-11,APP-2210,Merino Base Layer,Apparel,online,13,48.0,0
+19,2026-05-11,APP-2210,Merino Base Layer,Apparel,store,17,48.0,0
+20,2026-05-18,APP-2210,Merino Base Layer,Apparel,online,13,48.0,0
+20,2026-05-18,APP-2210,Merino Base Layer,Apparel,store,15,48.0,0
+21,2026-05-25,APP-2210,Merino Base Layer,Apparel,online,14,48.0,0
+21,2026-05-25,APP-2210,Merino Base Layer,Apparel,store,16,48.0,0
+22,2026-06-01,APP-2210,Merino Base Layer,Apparel,online,13,48.0,0
+22,2026-06-01,APP-2210,Merino Base Layer,Apparel,store,16,48.0,0
+23,2026-06-08,APP-2210,Merino Base Layer,Apparel,online,26,48.0,0
+23,2026-06-08,APP-2210,Merino Base Layer,Apparel,store,3,48.0,0
+24,2026-06-15,APP-2210,Merino Base Layer,Apparel,online,20,48.0,0
+24,2026-06-15,APP-2210,Merino Base Layer,Apparel,store,3,48.0,0
+25,2026-06-22,APP-2210,Merino Base Layer,Apparel,online,21,48.0,0
+25,2026-06-22,APP-2210,Merino Base Layer,Apparel,store,3,48.0,0
+26,2026-06-29,APP-2210,Merino Base Layer,Apparel,online,22,48.0,0
+26,2026-06-29,APP-2210,Merino Base Layer,Apparel,store,3,48.0,0
+1,2026-01-05,APP-2255,Fleece Vest,Apparel,online,8,55.0,0
+1,2026-01-05,APP-2255,Fleece Vest,Apparel,store,9,55.0,0
+2,2026-01-12,APP-2255,Fleece Vest,Apparel,online,7,55.0,0
+2,2026-01-12,APP-2255,Fleece Vest,Apparel,store,10,55.0,0
+3,2026-01-19,APP-2255,Fleece Vest,Apparel,online,10,55.0,0
+3,2026-01-19,APP-2255,Fleece Vest,Apparel,store,12,55.0,0
+4,2026-01-26,APP-2255,Fleece Vest,Apparel,online,9,55.0,0
+4,2026-01-26,APP-2255,Fleece Vest,Apparel,store,12,55.0,0
+5,2026-02-02,APP-2255,Fleece Vest,Apparel,online,8,55.0,0
+5,2026-02-02,APP-2255,Fleece Vest,Apparel,store,11,55.0,0
+6,2026-02-09,APP-2255,Fleece Vest,Apparel,online,9,55.0,0
+6,2026-02-09,APP-2255,Fleece Vest,Apparel,store,10,55.0,0
+7,2026-02-16,APP-2255,Fleece Vest,Apparel,online,7,55.0,0
+7,2026-02-16,APP-2255,Fleece Vest,Apparel,store,9,55.0,0
+8,2026-02-23,APP-2255,Fleece Vest,Apparel,online,9,55.0,0
+8,2026-02-23,APP-2255,Fleece Vest,Apparel,store,12,55.0,0
+9,2026-03-02,APP-2255,Fleece Vest,Apparel,online,8,55.0,0
+9,2026-03-02,APP-2255,Fleece Vest,Apparel,store,9,55.0,0
+10,2026-03-09,APP-2255,Fleece Vest,Apparel,online,9,55.0,0
+10,2026-03-09,APP-2255,Fleece Vest,Apparel,store,10,55.0,0
+11,2026-03-16,APP-2255,Fleece Vest,Apparel,online,11,55.0,0
+11,2026-03-16,APP-2255,Fleece Vest,Apparel,store,10,55.0,0
+12,2026-03-23,APP-2255,Fleece Vest,Apparel,online,9,55.0,0
+12,2026-03-23,APP-2255,Fleece Vest,Apparel,store,12,55.0,0
+13,2026-03-30,APP-2255,Fleece Vest,Apparel,online,10,55.0,0
+13,2026-03-30,APP-2255,Fleece Vest,Apparel,store,12,55.0,0
+14,2026-04-06,APP-2255,Fleece Vest,Apparel,online,12,55.0,0
+14,2026-04-06,APP-2255,Fleece Vest,Apparel,store,13,55.0,0
+15,2026-04-13,APP-2255,Fleece Vest,Apparel,online,12,55.0,0
+15,2026-04-13,APP-2255,Fleece Vest,Apparel,store,11,55.0,0
+16,2026-04-20,APP-2255,Fleece Vest,Apparel,online,8,55.0,0
+16,2026-04-20,APP-2255,Fleece Vest,Apparel,store,11,55.0,0
+17,2026-04-27,APP-2255,Fleece Vest,Apparel,online,9,55.0,0
+17,2026-04-27,APP-2255,Fleece Vest,Apparel,store,11,55.0,0
+18,2026-05-04,APP-2255,Fleece Vest,Apparel,online,9,55.0,0
+18,2026-05-04,APP-2255,Fleece Vest,Apparel,store,10,55.0,0
+19,2026-05-11,APP-2255,Fleece Vest,Apparel,online,9,55.0,0
+19,2026-05-11,APP-2255,Fleece Vest,Apparel,store,13,55.0,0
+20,2026-05-18,APP-2255,Fleece Vest,Apparel,online,9,55.0,0
+20,2026-05-18,APP-2255,Fleece Vest,Apparel,store,11,55.0,0
+21,2026-05-25,APP-2255,Fleece Vest,Apparel,online,13,55.0,0
+21,2026-05-25,APP-2255,Fleece Vest,Apparel,store,12,55.0,0
+22,2026-06-01,APP-2255,Fleece Vest,Apparel,online,14,55.0,0
+22,2026-06-01,APP-2255,Fleece Vest,Apparel,store,17,55.0,0
+23,2026-06-08,APP-2255,Fleece Vest,Apparel,online,8,55.0,0
+23,2026-06-08,APP-2255,Fleece Vest,Apparel,store,13,55.0,0
+24,2026-06-15,APP-2255,Fleece Vest,Apparel,online,10,55.0,0
+24,2026-06-15,APP-2255,Fleece Vest,Apparel,store,14,55.0,0
+25,2026-06-22,APP-2255,Fleece Vest,Apparel,online,10,55.0,0
+25,2026-06-22,APP-2255,Fleece Vest,Apparel,store,13,55.0,0
+26,2026-06-29,APP-2255,Fleece Vest,Apparel,online,12,55.0,0
+26,2026-06-29,APP-2255,Fleece Vest,Apparel,store,12,55.0,0
+1,2026-01-05,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,16,110.0,0
+1,2026-01-05,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,25,110.0,0
+2,2026-01-12,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,12,110.0,0
+2,2026-01-12,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,24,110.0,0
+3,2026-01-19,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,16,110.0,0
+3,2026-01-19,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,23,110.0,0
+4,2026-01-26,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,21,110.0,0
+4,2026-01-26,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,30,110.0,0
+5,2026-02-02,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,18,110.0,0
+5,2026-02-02,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,29,110.0,0
+6,2026-02-09,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,13,110.0,0
+6,2026-02-09,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,24,110.0,0
+7,2026-02-16,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,19,110.0,0
+7,2026-02-16,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,20,110.0,0
+8,2026-02-23,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,17,110.0,0
+8,2026-02-23,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,22,110.0,0
+9,2026-03-02,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,17,110.0,0
+9,2026-03-02,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,22,110.0,0
+10,2026-03-09,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,19,110.0,0
+10,2026-03-09,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,28,110.0,0
+11,2026-03-16,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,17,110.0,0
+11,2026-03-16,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,28,110.0,0
+12,2026-03-23,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,18,110.0,0
+12,2026-03-23,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,30,110.0,0
+13,2026-03-30,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,14,110.0,0
+13,2026-03-30,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,25,110.0,0
+14,2026-04-06,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,22,110.0,0
+14,2026-04-06,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,25,110.0,0
+15,2026-04-13,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,19,110.0,0
+15,2026-04-13,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,29,110.0,0
+16,2026-04-20,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,22,110.0,0
+16,2026-04-20,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,27,110.0,0
+17,2026-04-27,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,19,110.0,0
+17,2026-04-27,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,30,110.0,0
+18,2026-05-04,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,23,110.0,0
+18,2026-05-04,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,32,110.0,0
+19,2026-05-11,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,24,110.0,0
+19,2026-05-11,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,34,110.0,0
+20,2026-05-18,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,15,110.0,0
+20,2026-05-18,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,27,110.0,0
+21,2026-05-25,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,28,110.0,0
+21,2026-05-25,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,31,110.0,0
+22,2026-06-01,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,19,110.0,0
+22,2026-06-01,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,30,110.0,0
+23,2026-06-08,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,21,110.0,0
+23,2026-06-08,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,38,110.0,0
+24,2026-06-15,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,19,110.0,0
+24,2026-06-15,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,26,110.0,0
+25,2026-06-22,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,20,110.0,0
+25,2026-06-22,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,29,110.0,0
+26,2026-06-29,FTW-3301,Trail Runner Shoe - Men's,Footwear,online,21,110.0,0
+26,2026-06-29,FTW-3301,Trail Runner Shoe - Men's,Footwear,store,30,110.0,0
+1,2026-01-05,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,17,110.0,0
+1,2026-01-05,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,26,110.0,0
+2,2026-01-12,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,13,110.0,0
+2,2026-01-12,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,27,110.0,0
+3,2026-01-19,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,14,110.0,0
+3,2026-01-19,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,23,110.0,0
+4,2026-01-26,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,12,110.0,0
+4,2026-01-26,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,21,110.0,0
+5,2026-02-02,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,16,110.0,0
+5,2026-02-02,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,21,110.0,0
+6,2026-02-09,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,13,110.0,0
+6,2026-02-09,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,20,110.0,0
+7,2026-02-16,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,14,110.0,0
+7,2026-02-16,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,23,110.0,0
+8,2026-02-23,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,19,110.0,0
+8,2026-02-23,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,26,110.0,0
+9,2026-03-02,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,19,110.0,0
+9,2026-03-02,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,28,110.0,0
+10,2026-03-09,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,14,110.0,0
+10,2026-03-09,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,23,110.0,0
+11,2026-03-16,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,17,110.0,0
+11,2026-03-16,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,25,110.0,0
+12,2026-03-23,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,15,110.0,0
+12,2026-03-23,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,21,110.0,0
+13,2026-03-30,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,22,110.0,0
+13,2026-03-30,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,21,110.0,0
+14,2026-04-06,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,19,110.0,0
+14,2026-04-06,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,33,110.0,0
+15,2026-04-13,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,14,110.0,0
+15,2026-04-13,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,27,110.0,0
+16,2026-04-20,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,17,110.0,0
+16,2026-04-20,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,23,110.0,0
+17,2026-04-27,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,19,110.0,0
+17,2026-04-27,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,31,110.0,0
+18,2026-05-04,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,13,110.0,0
+18,2026-05-04,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,27,110.0,0
+19,2026-05-11,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,15,110.0,0
+19,2026-05-11,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,28,110.0,0
+20,2026-05-18,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,15,110.0,0
+20,2026-05-18,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,27,110.0,0
+21,2026-05-25,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,15,110.0,0
+21,2026-05-25,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,30,110.0,0
+22,2026-06-01,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,18,110.0,0
+22,2026-06-01,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,19,110.0,0
+23,2026-06-08,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,14,110.0,0
+23,2026-06-08,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,25,110.0,0
+24,2026-06-15,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,29,110.0,0
+24,2026-06-15,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,28,110.0,0
+25,2026-06-22,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,15,110.0,0
+25,2026-06-22,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,25,110.0,0
+26,2026-06-29,FTW-3302,Trail Runner Shoe - Women's,Footwear,online,23,110.0,0
+26,2026-06-29,FTW-3302,Trail Runner Shoe - Women's,Footwear,store,26,110.0,0
+1,2026-01-05,FTW-3350,Hiking Sandal,Footwear,online,5,65.0,0
+1,2026-01-05,FTW-3350,Hiking Sandal,Footwear,store,8,65.0,0
+2,2026-01-12,FTW-3350,Hiking Sandal,Footwear,online,7,65.0,0
+2,2026-01-12,FTW-3350,Hiking Sandal,Footwear,store,10,65.0,0
+3,2026-01-19,FTW-3350,Hiking Sandal,Footwear,online,6,65.0,0
+3,2026-01-19,FTW-3350,Hiking Sandal,Footwear,store,9,65.0,0
+4,2026-01-26,FTW-3350,Hiking Sandal,Footwear,online,5,65.0,0
+4,2026-01-26,FTW-3350,Hiking Sandal,Footwear,store,8,65.0,0
+5,2026-02-02,FTW-3350,Hiking Sandal,Footwear,online,6,65.0,0
+5,2026-02-02,FTW-3350,Hiking Sandal,Footwear,store,9,65.0,0
+6,2026-02-09,FTW-3350,Hiking Sandal,Footwear,online,6,65.0,0
+6,2026-02-09,FTW-3350,Hiking Sandal,Footwear,store,9,65.0,0
+7,2026-02-16,FTW-3350,Hiking Sandal,Footwear,online,7,65.0,0
+7,2026-02-16,FTW-3350,Hiking Sandal,Footwear,store,11,65.0,0
+8,2026-02-23,FTW-3350,Hiking Sandal,Footwear,online,7,65.0,0
+8,2026-02-23,FTW-3350,Hiking Sandal,Footwear,store,10,65.0,0
+9,2026-03-02,FTW-3350,Hiking Sandal,Footwear,online,6,65.0,0
+9,2026-03-02,FTW-3350,Hiking Sandal,Footwear,store,11,65.0,0
+10,2026-03-09,FTW-3350,Hiking Sandal,Footwear,online,7,65.0,0
+10,2026-03-09,FTW-3350,Hiking Sandal,Footwear,store,10,65.0,0
+11,2026-03-16,FTW-3350,Hiking Sandal,Footwear,online,10,65.0,0
+11,2026-03-16,FTW-3350,Hiking Sandal,Footwear,store,11,65.0,0
+12,2026-03-23,FTW-3350,Hiking Sandal,Footwear,online,7,65.0,0
+12,2026-03-23,FTW-3350,Hiking Sandal,Footwear,store,11,65.0,0
+13,2026-03-30,FTW-3350,Hiking Sandal,Footwear,online,7,65.0,0
+13,2026-03-30,FTW-3350,Hiking Sandal,Footwear,store,8,65.0,0
+14,2026-04-06,FTW-3350,Hiking Sandal,Footwear,online,8,65.0,0
+14,2026-04-06,FTW-3350,Hiking Sandal,Footwear,store,10,65.0,0
+15,2026-04-13,FTW-3350,Hiking Sandal,Footwear,online,6,65.0,0
+15,2026-04-13,FTW-3350,Hiking Sandal,Footwear,store,8,65.0,0
+16,2026-04-20,FTW-3350,Hiking Sandal,Footwear,online,7,65.0,0
+16,2026-04-20,FTW-3350,Hiking Sandal,Footwear,store,12,65.0,0
+17,2026-04-27,FTW-3350,Hiking Sandal,Footwear,online,7,65.0,0
+17,2026-04-27,FTW-3350,Hiking Sandal,Footwear,store,10,65.0,0
+18,2026-05-04,FTW-3350,Hiking Sandal,Footwear,online,7,65.0,0
+18,2026-05-04,FTW-3350,Hiking Sandal,Footwear,store,11,65.0,0
+19,2026-05-11,FTW-3350,Hiking Sandal,Footwear,online,7,65.0,0
+19,2026-05-11,FTW-3350,Hiking Sandal,Footwear,store,11,65.0,0
+20,2026-05-18,FTW-3350,Hiking Sandal,Footwear,online,9,65.0,0
+20,2026-05-18,FTW-3350,Hiking Sandal,Footwear,store,10,65.0,0
+21,2026-05-25,FTW-3350,Hiking Sandal,Footwear,online,5,65.0,0
+21,2026-05-25,FTW-3350,Hiking Sandal,Footwear,store,8,65.0,0
+22,2026-06-01,FTW-3350,Hiking Sandal,Footwear,online,8,65.0,0
+22,2026-06-01,FTW-3350,Hiking Sandal,Footwear,store,11,65.0,0
+23,2026-06-08,FTW-3350,Hiking Sandal,Footwear,online,6,65.0,0
+23,2026-06-08,FTW-3350,Hiking Sandal,Footwear,store,12,65.0,0
+24,2026-06-15,FTW-3350,Hiking Sandal,Footwear,online,9,65.0,0
+24,2026-06-15,FTW-3350,Hiking Sandal,Footwear,store,11,65.0,0
+25,2026-06-22,FTW-3350,Hiking Sandal,Footwear,online,7,65.0,0
+25,2026-06-22,FTW-3350,Hiking Sandal,Footwear,store,9,65.0,0
+26,2026-06-29,FTW-3350,Hiking Sandal,Footwear,online,8,65.0,0
+26,2026-06-29,FTW-3350,Hiking Sandal,Footwear,store,11,65.0,0
+1,2026-01-05,EQP-4410,45L Backpack,Equipment,online,3,145.0,0
+1,2026-01-05,EQP-4410,45L Backpack,Equipment,store,8,145.0,0
+2,2026-01-12,EQP-4410,45L Backpack,Equipment,online,5,145.0,0
+2,2026-01-12,EQP-4410,45L Backpack,Equipment,store,10,145.0,0
+3,2026-01-19,EQP-4410,45L Backpack,Equipment,online,6,145.0,0
+3,2026-01-19,EQP-4410,45L Backpack,Equipment,store,10,145.0,0
+4,2026-01-26,EQP-4410,45L Backpack,Equipment,online,5,145.0,0
+4,2026-01-26,EQP-4410,45L Backpack,Equipment,store,9,145.0,0
+5,2026-02-02,EQP-4410,45L Backpack,Equipment,online,5,145.0,0
+5,2026-02-02,EQP-4410,45L Backpack,Equipment,store,9,145.0,0
+6,2026-02-09,EQP-4410,45L Backpack,Equipment,online,4,145.0,0
+6,2026-02-09,EQP-4410,45L Backpack,Equipment,store,9,145.0,0
+7,2026-02-16,EQP-4410,45L Backpack,Equipment,online,4,145.0,0
+7,2026-02-16,EQP-4410,45L Backpack,Equipment,store,8,145.0,0
+8,2026-02-23,EQP-4410,45L Backpack,Equipment,online,4,145.0,0
+8,2026-02-23,EQP-4410,45L Backpack,Equipment,store,8,145.0,0
+9,2026-03-02,EQP-4410,45L Backpack,Equipment,online,5,145.0,0
+9,2026-03-02,EQP-4410,45L Backpack,Equipment,store,8,145.0,0
+10,2026-03-09,EQP-4410,45L Backpack,Equipment,online,6,145.0,0
+10,2026-03-09,EQP-4410,45L Backpack,Equipment,store,9,145.0,0
+11,2026-03-16,EQP-4410,45L Backpack,Equipment,online,4,145.0,0
+11,2026-03-16,EQP-4410,45L Backpack,Equipment,store,11,145.0,0
+12,2026-03-23,EQP-4410,45L Backpack,Equipment,online,4,145.0,0
+12,2026-03-23,EQP-4410,45L Backpack,Equipment,store,10,145.0,0
+13,2026-03-30,EQP-4410,45L Backpack,Equipment,online,5,145.0,0
+13,2026-03-30,EQP-4410,45L Backpack,Equipment,store,8,145.0,0
+14,2026-04-06,EQP-4410,45L Backpack,Equipment,online,4,145.0,0
+14,2026-04-06,EQP-4410,45L Backpack,Equipment,store,12,145.0,0
+15,2026-04-13,EQP-4410,45L Backpack,Equipment,online,4,145.0,0
+15,2026-04-13,EQP-4410,45L Backpack,Equipment,store,9,145.0,0
+16,2026-04-20,EQP-4410,45L Backpack,Equipment,online,4,145.0,0
+16,2026-04-20,EQP-4410,45L Backpack,Equipment,store,9,145.0,0
+17,2026-04-27,EQP-4410,45L Backpack,Equipment,online,5,145.0,0
+17,2026-04-27,EQP-4410,45L Backpack,Equipment,store,10,145.0,0
+18,2026-05-04,EQP-4410,45L Backpack,Equipment,online,3,145.0,0
+18,2026-05-04,EQP-4410,45L Backpack,Equipment,store,13,145.0,0
+19,2026-05-11,EQP-4410,45L Backpack,Equipment,online,5,145.0,0
+19,2026-05-11,EQP-4410,45L Backpack,Equipment,store,11,145.0,0
+20,2026-05-18,EQP-4410,45L Backpack,Equipment,online,6,145.0,0
+20,2026-05-18,EQP-4410,45L Backpack,Equipment,store,10,145.0,0
+21,2026-05-25,EQP-4410,45L Backpack,Equipment,online,3,145.0,0
+21,2026-05-25,EQP-4410,45L Backpack,Equipment,store,9,145.0,0
+22,2026-06-01,EQP-4410,45L Backpack,Equipment,online,4,145.0,0
+22,2026-06-01,EQP-4410,45L Backpack,Equipment,store,13,145.0,0
+23,2026-06-08,EQP-4410,45L Backpack,Equipment,online,6,145.0,0
+23,2026-06-08,EQP-4410,45L Backpack,Equipment,store,12,145.0,0
+24,2026-06-15,EQP-4410,45L Backpack,Equipment,online,5,145.0,0
+24,2026-06-15,EQP-4410,45L Backpack,Equipment,store,12,145.0,0
+25,2026-06-22,EQP-4410,45L Backpack,Equipment,online,6,145.0,0
+25,2026-06-22,EQP-4410,45L Backpack,Equipment,store,12,145.0,0
+26,2026-06-29,EQP-4410,45L Backpack,Equipment,online,5,145.0,0
+26,2026-06-29,EQP-4410,45L Backpack,Equipment,store,12,145.0,0
+1,2026-01-05,EQP-4455,2-Person Tent,Equipment,online,2,220.0,0
+1,2026-01-05,EQP-4455,2-Person Tent,Equipment,store,6,220.0,0
+2,2026-01-12,EQP-4455,2-Person Tent,Equipment,online,2,220.0,0
+2,2026-01-12,EQP-4455,2-Person Tent,Equipment,store,6,220.0,0
+3,2026-01-19,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+3,2026-01-19,EQP-4455,2-Person Tent,Equipment,store,6,220.0,0
+4,2026-01-26,EQP-4455,2-Person Tent,Equipment,online,2,220.0,0
+4,2026-01-26,EQP-4455,2-Person Tent,Equipment,store,5,220.0,0
+5,2026-02-02,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+5,2026-02-02,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+6,2026-02-09,EQP-4455,2-Person Tent,Equipment,online,2,220.0,0
+6,2026-02-09,EQP-4455,2-Person Tent,Equipment,store,6,220.0,0
+7,2026-02-16,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+7,2026-02-16,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+8,2026-02-23,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+8,2026-02-23,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+9,2026-03-02,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+9,2026-03-02,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+10,2026-03-09,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+10,2026-03-09,EQP-4455,2-Person Tent,Equipment,store,8,220.0,0
+11,2026-03-16,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+11,2026-03-16,EQP-4455,2-Person Tent,Equipment,store,4,220.0,0
+12,2026-03-23,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+12,2026-03-23,EQP-4455,2-Person Tent,Equipment,store,6,220.0,0
+13,2026-03-30,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+13,2026-03-30,EQP-4455,2-Person Tent,Equipment,store,8,220.0,0
+14,2026-04-06,EQP-4455,2-Person Tent,Equipment,online,2,220.0,0
+14,2026-04-06,EQP-4455,2-Person Tent,Equipment,store,6,220.0,0
+15,2026-04-13,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+15,2026-04-13,EQP-4455,2-Person Tent,Equipment,store,5,220.0,0
+16,2026-04-20,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+16,2026-04-20,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+17,2026-04-27,EQP-4455,2-Person Tent,Equipment,online,2,220.0,0
+17,2026-04-27,EQP-4455,2-Person Tent,Equipment,store,6,220.0,0
+18,2026-05-04,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+18,2026-05-04,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+19,2026-05-11,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+19,2026-05-11,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+20,2026-05-18,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+20,2026-05-18,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+21,2026-05-25,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+21,2026-05-25,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+22,2026-06-01,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+22,2026-06-01,EQP-4455,2-Person Tent,Equipment,store,6,220.0,0
+23,2026-06-08,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+23,2026-06-08,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+24,2026-06-15,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+24,2026-06-15,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+25,2026-06-22,EQP-4455,2-Person Tent,Equipment,online,3,220.0,0
+25,2026-06-22,EQP-4455,2-Person Tent,Equipment,store,7,220.0,0
+26,2026-06-29,EQP-4455,2-Person Tent,Equipment,online,2,220.0,0
+26,2026-06-29,EQP-4455,2-Person Tent,Equipment,store,9,220.0,0
+1,2026-01-05,EQP-4478,Trekking Poles (Pair),Equipment,online,3,49.0,0
+1,2026-01-05,EQP-4478,Trekking Poles (Pair),Equipment,store,11,49.0,0
+2,2026-01-12,EQP-4478,Trekking Poles (Pair),Equipment,online,3,49.0,0
+2,2026-01-12,EQP-4478,Trekking Poles (Pair),Equipment,store,9,49.0,0
+3,2026-01-19,EQP-4478,Trekking Poles (Pair),Equipment,online,5,49.0,0
+3,2026-01-19,EQP-4478,Trekking Poles (Pair),Equipment,store,14,49.0,0
+4,2026-01-26,EQP-4478,Trekking Poles (Pair),Equipment,online,6,49.0,0
+4,2026-01-26,EQP-4478,Trekking Poles (Pair),Equipment,store,12,49.0,0
+5,2026-02-02,EQP-4478,Trekking Poles (Pair),Equipment,online,6,49.0,0
+5,2026-02-02,EQP-4478,Trekking Poles (Pair),Equipment,store,15,49.0,0
+6,2026-02-09,EQP-4478,Trekking Poles (Pair),Equipment,online,6,49.0,0
+6,2026-02-09,EQP-4478,Trekking Poles (Pair),Equipment,store,15,49.0,0
+7,2026-02-16,EQP-4478,Trekking Poles (Pair),Equipment,online,4,49.0,0
+7,2026-02-16,EQP-4478,Trekking Poles (Pair),Equipment,store,12,49.0,0
+8,2026-02-23,EQP-4478,Trekking Poles (Pair),Equipment,online,4,49.0,0
+8,2026-02-23,EQP-4478,Trekking Poles (Pair),Equipment,store,11,49.0,0
+9,2026-03-02,EQP-4478,Trekking Poles (Pair),Equipment,online,6,49.0,0
+9,2026-03-02,EQP-4478,Trekking Poles (Pair),Equipment,store,12,49.0,0
+10,2026-03-09,EQP-4478,Trekking Poles (Pair),Equipment,online,6,49.0,0
+10,2026-03-09,EQP-4478,Trekking Poles (Pair),Equipment,store,17,49.0,0
+11,2026-03-16,EQP-4478,Trekking Poles (Pair),Equipment,online,5,49.0,0
+11,2026-03-16,EQP-4478,Trekking Poles (Pair),Equipment,store,15,49.0,0
+12,2026-03-23,EQP-4478,Trekking Poles (Pair),Equipment,online,6,49.0,0
+12,2026-03-23,EQP-4478,Trekking Poles (Pair),Equipment,store,14,49.0,0
+13,2026-03-30,EQP-4478,Trekking Poles (Pair),Equipment,online,5,49.0,0
+13,2026-03-30,EQP-4478,Trekking Poles (Pair),Equipment,store,10,49.0,0
+14,2026-04-06,EQP-4478,Trekking Poles (Pair),Equipment,online,5,49.0,0
+14,2026-04-06,EQP-4478,Trekking Poles (Pair),Equipment,store,13,49.0,0
+15,2026-04-13,EQP-4478,Trekking Poles (Pair),Equipment,online,5,49.0,0
+15,2026-04-13,EQP-4478,Trekking Poles (Pair),Equipment,store,12,49.0,0
+16,2026-04-20,EQP-4478,Trekking Poles (Pair),Equipment,online,6,49.0,0
+16,2026-04-20,EQP-4478,Trekking Poles (Pair),Equipment,store,15,49.0,0
+17,2026-04-27,EQP-4478,Trekking Poles (Pair),Equipment,online,7,49.0,0
+17,2026-04-27,EQP-4478,Trekking Poles (Pair),Equipment,store,14,49.0,0
+18,2026-05-04,EQP-4478,Trekking Poles (Pair),Equipment,online,7,49.0,0
+18,2026-05-04,EQP-4478,Trekking Poles (Pair),Equipment,store,17,49.0,0
+19,2026-05-11,EQP-4478,Trekking Poles (Pair),Equipment,online,6,49.0,0
+19,2026-05-11,EQP-4478,Trekking Poles (Pair),Equipment,store,11,49.0,0
+20,2026-05-18,EQP-4478,Trekking Poles (Pair),Equipment,online,7,49.0,0
+20,2026-05-18,EQP-4478,Trekking Poles (Pair),Equipment,store,13,49.0,0
+21,2026-05-25,EQP-4478,Trekking Poles (Pair),Equipment,online,6,49.0,0
+21,2026-05-25,EQP-4478,Trekking Poles (Pair),Equipment,store,16,49.0,0
+22,2026-06-01,EQP-4478,Trekking Poles (Pair),Equipment,online,8,49.0,0
+22,2026-06-01,EQP-4478,Trekking Poles (Pair),Equipment,store,14,49.0,0
+23,2026-06-08,EQP-4478,Trekking Poles (Pair),Equipment,online,8,49.0,0
+23,2026-06-08,EQP-4478,Trekking Poles (Pair),Equipment,store,19,49.0,0
+24,2026-06-15,EQP-4478,Trekking Poles (Pair),Equipment,online,8,49.0,0
+24,2026-06-15,EQP-4478,Trekking Poles (Pair),Equipment,store,14,49.0,0
+25,2026-06-22,EQP-4478,Trekking Poles (Pair),Equipment,online,6,49.0,0
+25,2026-06-22,EQP-4478,Trekking Poles (Pair),Equipment,store,13,49.0,0
+26,2026-06-29,EQP-4478,Trekking Poles (Pair),Equipment,online,7,49.0,0
+26,2026-06-29,EQP-4478,Trekking Poles (Pair),Equipment,store,15,49.0,0
+1,2026-01-05,ACC-9901,Wool Socks (3-pack),Accessory,online,4,22.0,0
+1,2026-01-05,ACC-9901,Wool Socks (3-pack),Accessory,store,41,22.0,0
+2,2026-01-12,ACC-9901,Wool Socks (3-pack),Accessory,online,4,22.0,0
+2,2026-01-12,ACC-9901,Wool Socks (3-pack),Accessory,store,34,22.0,0
+3,2026-01-19,ACC-9901,Wool Socks (3-pack),Accessory,online,7,22.0,0
+3,2026-01-19,ACC-9901,Wool Socks (3-pack),Accessory,store,41,22.0,0
+4,2026-01-26,ACC-9901,Wool Socks (3-pack),Accessory,online,12,22.0,0
+4,2026-01-26,ACC-9901,Wool Socks (3-pack),Accessory,store,51,22.0,0
+5,2026-02-02,ACC-9901,Wool Socks (3-pack),Accessory,online,8,22.0,0
+5,2026-02-02,ACC-9901,Wool Socks (3-pack),Accessory,store,38,22.0,0
+6,2026-02-09,ACC-9901,Wool Socks (3-pack),Accessory,online,7,22.0,0
+6,2026-02-09,ACC-9901,Wool Socks (3-pack),Accessory,store,43,22.0,0
+7,2026-02-16,ACC-9901,Wool Socks (3-pack),Accessory,online,9,22.0,0
+7,2026-02-16,ACC-9901,Wool Socks (3-pack),Accessory,store,45,22.0,0
+8,2026-02-23,ACC-9901,Wool Socks (3-pack),Accessory,online,10,22.0,0
+8,2026-02-23,ACC-9901,Wool Socks (3-pack),Accessory,store,41,22.0,0
+9,2026-03-02,ACC-9901,Wool Socks (3-pack),Accessory,online,7,22.0,0
+9,2026-03-02,ACC-9901,Wool Socks (3-pack),Accessory,store,40,22.0,0
+10,2026-03-09,ACC-9901,Wool Socks (3-pack),Accessory,online,11,22.0,0
+10,2026-03-09,ACC-9901,Wool Socks (3-pack),Accessory,store,60,22.0,0
+11,2026-03-16,ACC-9901,Wool Socks (3-pack),Accessory,online,10,22.0,0
+11,2026-03-16,ACC-9901,Wool Socks (3-pack),Accessory,store,54,22.0,0
+12,2026-03-23,ACC-9901,Wool Socks (3-pack),Accessory,online,9,22.0,0
+12,2026-03-23,ACC-9901,Wool Socks (3-pack),Accessory,store,50,22.0,0
+13,2026-03-30,ACC-9901,Wool Socks (3-pack),Accessory,online,7,22.0,0
+13,2026-03-30,ACC-9901,Wool Socks (3-pack),Accessory,store,48,22.0,0
+14,2026-04-06,ACC-9901,Wool Socks (3-pack),Accessory,online,7,22.0,0
+14,2026-04-06,ACC-9901,Wool Socks (3-pack),Accessory,store,53,22.0,0
+15,2026-04-13,ACC-9901,Wool Socks (3-pack),Accessory,online,12,22.0,0
+15,2026-04-13,ACC-9901,Wool Socks (3-pack),Accessory,store,50,22.0,0
+16,2026-04-20,ACC-9901,Wool Socks (3-pack),Accessory,online,8,22.0,0
+16,2026-04-20,ACC-9901,Wool Socks (3-pack),Accessory,store,52,22.0,0
+17,2026-04-27,ACC-9901,Wool Socks (3-pack),Accessory,online,8,22.0,0
+17,2026-04-27,ACC-9901,Wool Socks (3-pack),Accessory,store,53,22.0,0
+18,2026-05-04,ACC-9901,Wool Socks (3-pack),Accessory,online,5,22.0,0
+18,2026-05-04,ACC-9901,Wool Socks (3-pack),Accessory,store,60,22.0,0
+19,2026-05-11,ACC-9901,Wool Socks (3-pack),Accessory,online,4,22.0,0
+19,2026-05-11,ACC-9901,Wool Socks (3-pack),Accessory,store,53,22.0,0
+20,2026-05-18,ACC-9901,Wool Socks (3-pack),Accessory,online,10,22.0,0
+20,2026-05-18,ACC-9901,Wool Socks (3-pack),Accessory,store,39,22.0,0
+21,2026-05-25,ACC-9901,Wool Socks (3-pack),Accessory,online,8,22.0,0
+21,2026-05-25,ACC-9901,Wool Socks (3-pack),Accessory,store,59,22.0,0
+22,2026-06-01,ACC-9901,Wool Socks (3-pack),Accessory,online,2,22.0,0
+22,2026-06-01,ACC-9901,Wool Socks (3-pack),Accessory,store,48,22.0,0
+23,2026-06-08,ACC-9901,Wool Socks (3-pack),Accessory,online,14,22.0,0
+23,2026-06-08,ACC-9901,Wool Socks (3-pack),Accessory,store,44,22.0,0
+24,2026-06-15,ACC-9901,Wool Socks (3-pack),Accessory,online,8,22.0,0
+24,2026-06-15,ACC-9901,Wool Socks (3-pack),Accessory,store,57,22.0,0
+25,2026-06-22,ACC-9901,Wool Socks (3-pack),Accessory,online,6,22.0,0
+25,2026-06-22,ACC-9901,Wool Socks (3-pack),Accessory,store,60,22.0,0
+26,2026-06-29,ACC-9901,Wool Socks (3-pack),Accessory,online,9,22.0,0
+26,2026-06-29,ACC-9901,Wool Socks (3-pack),Accessory,store,52,22.0,0
+1,2026-01-05,ACC-9915,Insulated Water Bottle,Accessory,online,5,19.0,0
+1,2026-01-05,ACC-9915,Insulated Water Bottle,Accessory,store,24,19.0,0
+2,2026-01-12,ACC-9915,Insulated Water Bottle,Accessory,online,5,19.0,0
+2,2026-01-12,ACC-9915,Insulated Water Bottle,Accessory,store,26,19.0,0
+3,2026-01-19,ACC-9915,Insulated Water Bottle,Accessory,online,5,19.0,0
+3,2026-01-19,ACC-9915,Insulated Water Bottle,Accessory,store,23,19.0,0
+4,2026-01-26,ACC-9915,Insulated Water Bottle,Accessory,online,4,19.0,0
+4,2026-01-26,ACC-9915,Insulated Water Bottle,Accessory,store,33,19.0,0
+5,2026-02-02,ACC-9915,Insulated Water Bottle,Accessory,online,6,19.0,0
+5,2026-02-02,ACC-9915,Insulated Water Bottle,Accessory,store,22,19.0,0
+6,2026-02-09,ACC-9915,Insulated Water Bottle,Accessory,online,6,19.0,0
+6,2026-02-09,ACC-9915,Insulated Water Bottle,Accessory,store,25,19.0,0
+7,2026-02-16,ACC-9915,Insulated Water Bottle,Accessory,online,6,19.0,0
+7,2026-02-16,ACC-9915,Insulated Water Bottle,Accessory,store,24,19.0,0
+8,2026-02-23,ACC-9915,Insulated Water Bottle,Accessory,online,5,19.0,0
+8,2026-02-23,ACC-9915,Insulated Water Bottle,Accessory,store,28,19.0,0
+9,2026-03-02,ACC-9915,Insulated Water Bottle,Accessory,online,5,19.0,0
+9,2026-03-02,ACC-9915,Insulated Water Bottle,Accessory,store,33,19.0,0
+10,2026-03-09,ACC-9915,Insulated Water Bottle,Accessory,online,4,19.0,0
+10,2026-03-09,ACC-9915,Insulated Water Bottle,Accessory,store,25,19.0,0
+11,2026-03-16,ACC-9915,Insulated Water Bottle,Accessory,online,3,19.0,0
+11,2026-03-16,ACC-9915,Insulated Water Bottle,Accessory,store,32,19.0,0
+12,2026-03-23,ACC-9915,Insulated Water Bottle,Accessory,online,5,19.0,0
+12,2026-03-23,ACC-9915,Insulated Water Bottle,Accessory,store,31,19.0,0
+13,2026-03-30,ACC-9915,Insulated Water Bottle,Accessory,online,2,19.0,0
+13,2026-03-30,ACC-9915,Insulated Water Bottle,Accessory,store,36,19.0,0
+14,2026-04-06,ACC-9915,Insulated Water Bottle,Accessory,online,3,19.0,0
+14,2026-04-06,ACC-9915,Insulated Water Bottle,Accessory,store,28,19.0,0
+15,2026-04-13,ACC-9915,Insulated Water Bottle,Accessory,online,5,19.0,0
+15,2026-04-13,ACC-9915,Insulated Water Bottle,Accessory,store,26,19.0,0
+16,2026-04-20,ACC-9915,Insulated Water Bottle,Accessory,online,5,19.0,0
+16,2026-04-20,ACC-9915,Insulated Water Bottle,Accessory,store,29,19.0,0
+17,2026-04-27,ACC-9915,Insulated Water Bottle,Accessory,online,5,19.0,0
+17,2026-04-27,ACC-9915,Insulated Water Bottle,Accessory,store,29,19.0,0
+18,2026-05-04,ACC-9915,Insulated Water Bottle,Accessory,online,6,19.0,0
+18,2026-05-04,ACC-9915,Insulated Water Bottle,Accessory,store,25,19.0,0
+19,2026-05-11,ACC-9915,Insulated Water Bottle,Accessory,online,6,19.0,0
+19,2026-05-11,ACC-9915,Insulated Water Bottle,Accessory,store,32,19.0,0
+20,2026-05-18,ACC-9915,Insulated Water Bottle,Accessory,online,6,19.0,0
+20,2026-05-18,ACC-9915,Insulated Water Bottle,Accessory,store,32,19.0,0
+21,2026-05-25,ACC-9915,Insulated Water Bottle,Accessory,online,7,19.0,0
+21,2026-05-25,ACC-9915,Insulated Water Bottle,Accessory,store,38,19.0,0
+22,2026-06-01,ACC-9915,Insulated Water Bottle,Accessory,online,4,19.0,0
+22,2026-06-01,ACC-9915,Insulated Water Bottle,Accessory,store,31,19.0,0
+23,2026-06-08,ACC-9915,Insulated Water Bottle,Accessory,online,3,19.0,0
+23,2026-06-08,ACC-9915,Insulated Water Bottle,Accessory,store,29,19.0,0
+24,2026-06-15,ACC-9915,Insulated Water Bottle,Accessory,online,5,19.0,0
+24,2026-06-15,ACC-9915,Insulated Water Bottle,Accessory,store,28,19.0,0
+25,2026-06-22,ACC-9915,Insulated Water Bottle,Accessory,online,6,19.0,0
+25,2026-06-22,ACC-9915,Insulated Water Bottle,Accessory,store,33,19.0,0
+26,2026-06-29,ACC-9915,Insulated Water Bottle,Accessory,online,6,19.0,0
+26,2026-06-29,ACC-9915,Insulated Water Bottle,Accessory,store,28,19.0,0
+1,2026-01-05,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+1,2026-01-05,ACC-9930,Headlamp,Accessory,store,21,28.0,0
+2,2026-01-12,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+2,2026-01-12,ACC-9930,Headlamp,Accessory,store,17,28.0,0
+3,2026-01-19,ACC-9930,Headlamp,Accessory,online,2,28.0,0
+3,2026-01-19,ACC-9930,Headlamp,Accessory,store,21,28.0,0
+4,2026-01-26,ACC-9930,Headlamp,Accessory,online,4,28.0,0
+4,2026-01-26,ACC-9930,Headlamp,Accessory,store,18,28.0,0
+5,2026-02-02,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+5,2026-02-02,ACC-9930,Headlamp,Accessory,store,17,28.0,0
+6,2026-02-09,ACC-9930,Headlamp,Accessory,online,4,28.0,0
+6,2026-02-09,ACC-9930,Headlamp,Accessory,store,15,28.0,0
+7,2026-02-16,ACC-9930,Headlamp,Accessory,online,4,28.0,0
+7,2026-02-16,ACC-9930,Headlamp,Accessory,store,22,28.0,0
+8,2026-02-23,ACC-9930,Headlamp,Accessory,online,1,28.0,0
+8,2026-02-23,ACC-9930,Headlamp,Accessory,store,23,28.0,0
+9,2026-03-02,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+9,2026-03-02,ACC-9930,Headlamp,Accessory,store,17,28.0,0
+10,2026-03-09,ACC-9930,Headlamp,Accessory,online,4,28.0,0
+10,2026-03-09,ACC-9930,Headlamp,Accessory,store,17,28.0,0
+11,2026-03-16,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+11,2026-03-16,ACC-9930,Headlamp,Accessory,store,27,28.0,0
+12,2026-03-23,ACC-9930,Headlamp,Accessory,online,4,28.0,0
+12,2026-03-23,ACC-9930,Headlamp,Accessory,store,18,28.0,0
+13,2026-03-30,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+13,2026-03-30,ACC-9930,Headlamp,Accessory,store,26,28.0,0
+14,2026-04-06,ACC-9930,Headlamp,Accessory,online,6,28.0,0
+14,2026-04-06,ACC-9930,Headlamp,Accessory,store,19,28.0,0
+15,2026-04-13,ACC-9930,Headlamp,Accessory,online,2,28.0,0
+15,2026-04-13,ACC-9930,Headlamp,Accessory,store,18,28.0,0
+16,2026-04-20,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+16,2026-04-20,ACC-9930,Headlamp,Accessory,store,21,28.0,0
+17,2026-04-27,ACC-9930,Headlamp,Accessory,online,4,28.0,0
+17,2026-04-27,ACC-9930,Headlamp,Accessory,store,24,28.0,0
+18,2026-05-04,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+18,2026-05-04,ACC-9930,Headlamp,Accessory,store,17,28.0,0
+19,2026-05-11,ACC-9930,Headlamp,Accessory,online,5,28.0,0
+19,2026-05-11,ACC-9930,Headlamp,Accessory,store,19,28.0,0
+20,2026-05-18,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+20,2026-05-18,ACC-9930,Headlamp,Accessory,store,21,28.0,0
+21,2026-05-25,ACC-9930,Headlamp,Accessory,online,5,28.0,0
+21,2026-05-25,ACC-9930,Headlamp,Accessory,store,23,28.0,0
+22,2026-06-01,ACC-9930,Headlamp,Accessory,online,2,28.0,0
+22,2026-06-01,ACC-9930,Headlamp,Accessory,store,26,28.0,0
+23,2026-06-08,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+23,2026-06-08,ACC-9930,Headlamp,Accessory,store,26,28.0,0
+24,2026-06-15,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+24,2026-06-15,ACC-9930,Headlamp,Accessory,store,25,28.0,0
+25,2026-06-22,ACC-9930,Headlamp,Accessory,online,3,28.0,0
+25,2026-06-22,ACC-9930,Headlamp,Accessory,store,26,28.0,0
+26,2026-06-29,ACC-9930,Headlamp,Accessory,online,4,28.0,0
+26,2026-06-29,ACC-9930,Headlamp,Accessory,store,19,28.0,0
+1,2026-01-05,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+1,2026-01-05,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+2,2026-01-12,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+2,2026-01-12,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+3,2026-01-19,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+3,2026-01-19,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+4,2026-01-26,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+4,2026-01-26,ACC-9981,"Replacement Buckle, Blue",Accessory,store,2,6.0,0
+5,2026-02-02,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+5,2026-02-02,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+6,2026-02-09,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+6,2026-02-09,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+7,2026-02-16,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+7,2026-02-16,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+8,2026-02-23,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+8,2026-02-23,ACC-9981,"Replacement Buckle, Blue",Accessory,store,1,6.0,0
+9,2026-03-02,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+9,2026-03-02,ACC-9981,"Replacement Buckle, Blue",Accessory,store,3,6.0,0
+10,2026-03-09,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+10,2026-03-09,ACC-9981,"Replacement Buckle, Blue",Accessory,store,3,6.0,0
+11,2026-03-16,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+11,2026-03-16,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+12,2026-03-23,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+12,2026-03-23,ACC-9981,"Replacement Buckle, Blue",Accessory,store,1,6.0,0
+13,2026-03-30,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+13,2026-03-30,ACC-9981,"Replacement Buckle, Blue",Accessory,store,1,6.0,0
+14,2026-04-06,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+14,2026-04-06,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+15,2026-04-13,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+15,2026-04-13,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+16,2026-04-20,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+16,2026-04-20,ACC-9981,"Replacement Buckle, Blue",Accessory,store,1,6.0,0
+17,2026-04-27,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+17,2026-04-27,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+18,2026-05-04,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+18,2026-05-04,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+19,2026-05-11,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+19,2026-05-11,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+20,2026-05-18,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+20,2026-05-18,ACC-9981,"Replacement Buckle, Blue",Accessory,store,1,6.0,0
+21,2026-05-25,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+21,2026-05-25,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+22,2026-06-01,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+22,2026-06-01,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+23,2026-06-08,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+23,2026-06-08,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+24,2026-06-15,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+24,2026-06-15,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+25,2026-06-22,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+25,2026-06-22,ACC-9981,"Replacement Buckle, Blue",Accessory,store,1,6.0,0
+26,2026-06-29,ACC-9981,"Replacement Buckle, Blue",Accessory,online,0,6.0,0
+26,2026-06-29,ACC-9981,"Replacement Buckle, Blue",Accessory,store,0,6.0,0
+1,2026-01-05,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+1,2026-01-05,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+2,2026-01-12,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+2,2026-01-12,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+3,2026-01-19,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+3,2026-01-19,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+4,2026-01-26,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+4,2026-01-26,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+5,2026-02-02,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+5,2026-02-02,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+6,2026-02-09,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+6,2026-02-09,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+7,2026-02-16,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+7,2026-02-16,ACC-9982,"Replacement Buckle, Black",Accessory,store,1,6.0,0
+8,2026-02-23,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+8,2026-02-23,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+9,2026-03-02,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+9,2026-03-02,ACC-9982,"Replacement Buckle, Black",Accessory,store,2,6.0,0
+10,2026-03-09,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+10,2026-03-09,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+11,2026-03-16,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+11,2026-03-16,ACC-9982,"Replacement Buckle, Black",Accessory,store,1,6.0,0
+12,2026-03-23,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+12,2026-03-23,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+13,2026-03-30,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+13,2026-03-30,ACC-9982,"Replacement Buckle, Black",Accessory,store,1,6.0,0
+14,2026-04-06,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+14,2026-04-06,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+15,2026-04-13,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+15,2026-04-13,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+16,2026-04-20,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+16,2026-04-20,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+17,2026-04-27,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+17,2026-04-27,ACC-9982,"Replacement Buckle, Black",Accessory,store,1,6.0,0
+18,2026-05-04,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+18,2026-05-04,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+19,2026-05-11,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+19,2026-05-11,ACC-9982,"Replacement Buckle, Black",Accessory,store,2,6.0,0
+20,2026-05-18,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+20,2026-05-18,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+21,2026-05-25,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+21,2026-05-25,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+22,2026-06-01,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+22,2026-06-01,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+23,2026-06-08,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+23,2026-06-08,ACC-9982,"Replacement Buckle, Black",Accessory,store,2,6.0,0
+24,2026-06-15,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+24,2026-06-15,ACC-9982,"Replacement Buckle, Black",Accessory,store,1,6.0,0
+25,2026-06-22,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+25,2026-06-22,ACC-9982,"Replacement Buckle, Black",Accessory,store,1,6.0,0
+26,2026-06-29,ACC-9982,"Replacement Buckle, Black",Accessory,online,0,6.0,0
+26,2026-06-29,ACC-9982,"Replacement Buckle, Black",Accessory,store,0,6.0,0
+1,2026-01-05,APP-2299,Rain Shell,Apparel,online,9,85.0,0
+1,2026-01-05,APP-2299,Rain Shell,Apparel,store,8,85.0,0
+2,2026-01-12,APP-2299,Rain Shell,Apparel,online,8,85.0,0
+2,2026-01-12,APP-2299,Rain Shell,Apparel,store,7,85.0,0
+3,2026-01-19,APP-2299,Rain Shell,Apparel,online,7,85.0,0
+3,2026-01-19,APP-2299,Rain Shell,Apparel,store,8,85.0,0
+4,2026-01-26,APP-2299,Rain Shell,Apparel,online,6,85.0,0
+4,2026-01-26,APP-2299,Rain Shell,Apparel,store,7,85.0,0
+5,2026-02-02,APP-2299,Rain Shell,Apparel,online,6,85.0,0
+5,2026-02-02,APP-2299,Rain Shell,Apparel,store,9,85.0,0
+6,2026-02-09,APP-2299,Rain Shell,Apparel,online,7,85.0,0
+6,2026-02-09,APP-2299,Rain Shell,Apparel,store,8,85.0,0
+7,2026-02-16,APP-2299,Rain Shell,Apparel,online,9,85.0,0
+7,2026-02-16,APP-2299,Rain Shell,Apparel,store,10,85.0,0
+8,2026-02-23,APP-2299,Rain Shell,Apparel,online,7,85.0,0
+8,2026-02-23,APP-2299,Rain Shell,Apparel,store,9,85.0,0
+9,2026-03-02,APP-2299,Rain Shell,Apparel,online,7,85.0,0
+9,2026-03-02,APP-2299,Rain Shell,Apparel,store,9,85.0,0
+10,2026-03-09,APP-2299,Rain Shell,Apparel,online,6,85.0,0
+10,2026-03-09,APP-2299,Rain Shell,Apparel,store,8,85.0,0
+11,2026-03-16,APP-2299,Rain Shell,Apparel,online,6,85.0,0
+11,2026-03-16,APP-2299,Rain Shell,Apparel,store,9,85.0,0
+12,2026-03-23,APP-2299,Rain Shell,Apparel,online,8,85.0,0
+12,2026-03-23,APP-2299,Rain Shell,Apparel,store,9,85.0,0
+13,2026-03-30,APP-2299,Rain Shell,Apparel,online,6,85.0,0
+13,2026-03-30,APP-2299,Rain Shell,Apparel,store,7,85.0,0
+14,2026-04-06,APP-2299,Rain Shell,Apparel,online,9,85.0,0
+14,2026-04-06,APP-2299,Rain Shell,Apparel,store,9,85.0,0
+15,2026-04-13,APP-2299,Rain Shell,Apparel,online,9,85.0,0
+15,2026-04-13,APP-2299,Rain Shell,Apparel,store,10,85.0,0
+16,2026-04-20,APP-2299,Rain Shell,Apparel,online,6,85.0,0
+16,2026-04-20,APP-2299,Rain Shell,Apparel,store,9,85.0,0
+17,2026-04-27,APP-2299,Rain Shell,Apparel,online,8,85.0,0
+17,2026-04-27,APP-2299,Rain Shell,Apparel,store,10,85.0,0
+18,2026-05-04,APP-2299,Rain Shell,Apparel,online,10,85.0,0
+18,2026-05-04,APP-2299,Rain Shell,Apparel,store,10,85.0,0
+19,2026-05-11,APP-2299,Rain Shell,Apparel,online,7,85.0,0
+19,2026-05-11,APP-2299,Rain Shell,Apparel,store,10,85.0,0
+20,2026-05-18,APP-2299,Rain Shell,Apparel,online,8,85.0,0
+20,2026-05-18,APP-2299,Rain Shell,Apparel,store,9,85.0,0
+21,2026-05-25,APP-2299,Rain Shell,Apparel,online,7,85.0,0
+21,2026-05-25,APP-2299,Rain Shell,Apparel,store,10,85.0,0
+22,2026-06-01,APP-2299,Rain Shell,Apparel,online,8,85.0,0
+22,2026-06-01,APP-2299,Rain Shell,Apparel,store,10,85.0,0
+23,2026-06-08,APP-2299,Rain Shell,Apparel,online,8,85.0,0
+23,2026-06-08,APP-2299,Rain Shell,Apparel,store,9,85.0,0
+24,2026-06-15,APP-2299,Rain Shell,Apparel,online,8,85.0,0
+24,2026-06-15,APP-2299,Rain Shell,Apparel,store,9,85.0,0
+25,2026-06-22,APP-2299,Rain Shell,Apparel,online,8,85.0,0
+25,2026-06-22,APP-2299,Rain Shell,Apparel,store,11,85.0,0
+26,2026-06-29,APP-2299,Rain Shell,Apparel,online,9,85.0,0
+26,2026-06-29,APP-2299,Rain Shell,Apparel,store,8,85.0,0

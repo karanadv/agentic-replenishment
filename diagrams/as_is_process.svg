@@ -1,0 +1,37 @@
+<svg width="800" height="220" viewBox="0 0 680 180" xmlns="http://www.w3.org/2000/svg" role="img" style="background:#ffffff">
+<title>As-is manual replenishment process</title>
+<desc>A linear four-step manual process: pull data, analyze, decide, act, with no review or audit step, run entirely by one planner.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+
+<g>
+<rect x="50" y="40" width="130" height="56" rx="8" stroke-width="1" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="115" y="58" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">Pull data</text>
+<text x="115" y="76" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#444441">Manual ERP export</text>
+</g>
+
+<g>
+<rect x="200" y="40" width="130" height="56" rx="8" stroke-width="1" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="265" y="58" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">Analyze</text>
+<text x="265" y="76" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#444441">Eyeball trends</text>
+</g>
+
+<g>
+<rect x="350" y="40" width="130" height="56" rx="8" stroke-width="1" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="415" y="58" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#2C2C2A">Decide</text>
+<text x="415" y="76" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#444441">Gut-feel quantity</text>
+</g>
+
+<g>
+<rect x="500" y="40" width="130" height="56" rx="8" stroke-width="1" fill="#FAECE7" stroke="#993C1D"/>
+<text x="565" y="58" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#4A1B0C">Act</text>
+<text x="565" y="76" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#712B13">Key into ERP</text>
+</g>
+
+<line x1="180" y1="68" x2="196" y2="68" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="330" y1="68" x2="346" y2="68" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="480" y1="68" x2="496" y2="68" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<text x="340" y="140" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#444441">No review, no audit trail — one planner, unstructured judgment, start to finish</text>
+</svg>

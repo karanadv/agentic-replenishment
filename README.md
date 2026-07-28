@@ -1,5 +1,7 @@
 # Agentic Replenishment — Prototype
 
+**Live app:** https://agentic-replenishment-cfz5mznsmvyujuc692qt9e.streamlit.app/
+
 A rule-based sense → decide → act → escalate pipeline for retail replenishment,
 with a Streamlit dashboard as the trust & control layer.
 
@@ -23,18 +25,20 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-This opens the dashboard at `http://localhost:8501`. Note: this prototype's engine logic
-was fully tested (see `engine/` — every function was run and its output checked against
-the three known edge cases), but the Streamlit UI itself hasn't been runtime-tested in
-this build environment (no network access to install Streamlit here) — run it locally
-first before recording your demo, in case any UI-layer issue needs a quick fix.
+This opens the dashboard at `http://localhost:8501`. The engine logic in `engine/` is
+verified end-to-end against all four embedded edge cases; the app is also deployed and
+running at the URL below. Note that the engine was updated after the initial deployment
+(see decisions 5 and 5b in the decisions README) — if the live app is showing older
+numbers, push the current `engine/` files to GitHub and reboot the app.
 
 ## Deploy (for your live URL)
 
-1. Push this folder to a new GitHub repo.
+**Already deployed:** https://agentic-replenishment-cfz5mznsmvyujuc692qt9e.streamlit.app/
+
+To redeploy or update after changes:
+1. Push updated files to the GitHub repo.
 2. Go to [share.streamlit.io](https://share.streamlit.io), sign in with GitHub.
-3. "New app" → pick your repo → main file path `app.py` → Deploy.
-4. You'll get a public URL like `https://your-app-name.streamlit.app`.
+3. Find the app under "Manage app" and it will auto-redeploy on new commits, or click "Reboot app."
 
 ## The three built-in edge cases
 

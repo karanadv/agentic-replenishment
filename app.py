@@ -48,10 +48,19 @@ st.sidebar.caption(
     "This is the knob from the workflow design step: how much the agent "
     "gets to act on its own vs. how much always comes back to a human."
 )
+st.sidebar.warning(
+    f"**Hard floor: {escalate.AUTONOMY_FLOOR:.0%}.** Nothing below this auto-approves at "
+    "any slider setting. When the agent has flagged a SKU as beyond its own competence, "
+    "that isn't something an autonomy dial should be able to wave through."
+)
 st.sidebar.divider()
 st.sidebar.metric("Total SKUs", len(drafts))
 n_review = sum(1 for d in drafts if escalate.route(d, threshold) == "needs_review")
+n_urgent = sum(1 for d in drafts if d["urgent"])
+n_floor = sum(1 for d in drafts if d["confidence"] < escalate.AUTONOMY_FLOOR)
 st.sidebar.metric("Flagged for review", n_review)
+st.sidebar.metric("Urgent (stockout risk)", n_urgent)
+st.sidebar.metric("Below autonomy floor", n_floor)
 
 # ---------------------------------------------------------------------
 # Header
@@ -77,34 +86,54 @@ with tab_dashboard:
         st.subheader("All recommendations")
         rows = []
         for d in drafts:
-            lane = escalate.route(d, threshold)
+            lane, why = escalate.route_with_reason(d, threshold)
+            lane_label = {
+                "below_autonomy_floor": "🔒 Below autonomy floor",
+                "urgent_operational_risk": "🔴 Urgent (stockout risk)",
+                "below_planner_threshold": "🟡 Needs review",
+                "within_autonomy": "🟢 Auto-approved",
+            }[why]
             rows.append({
                 "SKU": d["sku_id"],
                 "Name": d["sku_name"],
                 "Qty": d["recommended_qty"],
                 "Est. cost": f"${d['total_cost']:,.2f}",
                 "Confidence": d["confidence"],
-                "Lane": "🟡 Needs review" if lane == "needs_review" else "🟢 Auto-approved",
+                "Lane": lane_label,
                 "Tags": ", ".join(d["tags"]) if d["tags"] else "—",
             })
         df = pd.DataFrame(rows).sort_values("Confidence")
         st.dataframe(df, use_container_width=True, hide_index=True)
 
     with col2:
-        st.subheader("Demand trend: the 3 edge cases")
+        st.subheader("Demand by channel: the 4 edge cases")
         pick = st.selectbox(
             "SKU",
-            options=["APP-1042 (demand spike)", "FTW-3301 (lead-time disruption)", "ACC-9981 (long-tail)"],
+            options=[
+                "APP-1042 (demand spike)",
+                "APP-2210 (hidden channel shift)",
+                "FTW-3301 (lead-time disruption)",
+                "ACC-9981 (long-tail)",
+            ],
         )
         sku_id = pick.split()[0]
-        chart_data = sales[sales.sku_id == sku_id][["week_number", "units_sold"]]
+        chart_data = sales[sales.sku_id == sku_id][["week_number", "channel", "units_sold"]]
         chart = (
             alt.Chart(chart_data)
-            .mark_line(point=True)
-            .encode(x="week_number:Q", y="units_sold:Q")
+            .mark_bar()
+            .encode(
+                x="week_number:O",
+                y="units_sold:Q",
+                color=alt.Color("channel:N", scale=alt.Scale(domain=["online", "store"])),
+            )
             .properties(height=260)
         )
         st.altair_chart(chart, use_container_width=True)
+        if sku_id == "APP-2210":
+            st.caption(
+                "Total units per week barely move — but online (bottom of each bar) "
+                "climbs while store drops. That shift is invisible if you only look at the total."
+            )
 
 # ---------------------------------------------------------------------
 # Tab 2: Needs review — the actual trust & control layer
@@ -112,21 +141,33 @@ with tab_dashboard:
 with tab_review:
     st.subheader("Recommendations held for planner review")
     review_drafts = [d for d in drafts if escalate.route(d, threshold) == "needs_review"]
+    # Ordered by exposure, not by SKU order or confidence: a queue that doesn't
+    # rank is one a planner works top-to-bottom by accident. Items with no
+    # stockout exposure sort below those with it, then by ascending confidence.
+    review_drafts.sort(key=lambda d: (-d["revenue_at_risk"], d["confidence"]))
 
     if not review_drafts:
         st.info("Nothing is currently below the confidence threshold. Try lowering the slider.")
 
     for d in review_drafts:
         with st.container(border=True):
+            _, why = escalate.route_with_reason(d, threshold)
+            reason_label = {
+                "below_autonomy_floor": "🔒 Below autonomy floor — cannot be auto-approved",
+                "urgent_operational_risk": "🔴 URGENT — stockout risk",
+                "below_planner_threshold": "🟡 Below your confidence threshold",
+            }.get(why, "")
             c1, c2 = st.columns([3, 1])
             with c1:
-                st.markdown(f"**{d['sku_id']} — {d['sku_name']}**")
+                st.markdown(f"**{d['sku_id']} — {d['sku_name']}** {reason_label}")
                 st.caption(f"Tags: {', '.join(d['tags'])}")
                 for r in d["reasoning"]:
                     st.write(f"- {r}")
             with c2:
                 st.metric("Confidence", f"{d['confidence']:.0%}")
                 st.metric("Recommended qty", d["recommended_qty"])
+                if d["revenue_at_risk"] > 0:
+                    st.metric("Revenue at risk", f"{d['revenue_at_risk']:,.0f}")
 
             edited_qty = st.number_input(
                 "Approve with quantity:", min_value=0, value=d["recommended_qty"], key=f"qty_{d['sku_id']}"

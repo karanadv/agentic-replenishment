@@ -21,6 +21,8 @@ def draft_po(feature_row: dict, decision: dict) -> dict:
         "unit_cost": unit_cost,
         "total_cost": round(qty * unit_cost, 2),
         "confidence": decision["confidence"],
+        "urgent": decision["urgent"],
+        "revenue_at_risk": decision["revenue_at_risk"],
         "tags": decision["tags"],
         "reasoning": decision["reasoning"],
     }
