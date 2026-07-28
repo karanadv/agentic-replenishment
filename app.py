@@ -1,0 +1,165 @@
+"""
+Agentic Ops Build — replenishment prototype.
+
+Streamlit is the whole UI layer here; all the actual "agent" logic
+(sense -> decide -> act -> escalate) lives in engine/, imported below.
+This file's job is just: render state, capture human decisions, log them.
+"""
+
+import streamlit as st
+import pandas as pd
+import altair as alt
+
+from engine import sense, decide as decide_mod, act, escalate
+
+st.set_page_config(page_title="Agentic Replenishment", layout="wide")
+
+# ---------------------------------------------------------------------
+# Load + compute (cached so the sidebar slider doesn't re-read CSVs)
+# ---------------------------------------------------------------------
+@st.cache_data
+def load_and_compute():
+    sales, suppliers, inventory = sense.load_data("data")
+    features = sense.compute_features(sales, suppliers, inventory)
+    drafts = []
+    for _, row in features.iterrows():
+        fr = row.to_dict()
+        d = decide_mod.decide(fr)
+        draft = act.draft_po(fr, d)
+        drafts.append(draft)
+    return sales, suppliers, features, drafts
+
+
+sales, suppliers, features, drafts = load_and_compute()
+
+if "decision_log" not in st.session_state:
+    st.session_state.decision_log = []
+
+# ---------------------------------------------------------------------
+# Sidebar: the one tunable control from our workflow design
+# ---------------------------------------------------------------------
+st.sidebar.title("⚙️ Control layer")
+threshold = st.sidebar.slider(
+    "Confidence threshold for auto-approval",
+    min_value=0.0, max_value=0.99, value=0.70, step=0.01,
+    help="Recommendations below this confidence are held for planner review instead of auto-applied.",
+)
+st.sidebar.caption(
+    "This is the knob from the workflow design step: how much the agent "
+    "gets to act on its own vs. how much always comes back to a human."
+)
+st.sidebar.divider()
+st.sidebar.metric("Total SKUs", len(drafts))
+n_review = sum(1 for d in drafts if escalate.route(d, threshold) == "needs_review")
+st.sidebar.metric("Flagged for review", n_review)
+
+# ---------------------------------------------------------------------
+# Header
+# ---------------------------------------------------------------------
+st.title("Agentic Replenishment — Planner Dashboard")
+st.caption(
+    "26 weeks of synthetic sales/inventory data. The agent senses demand + "
+    "lead-time signals, decides a reorder quantity with a confidence score, "
+    "drafts a PO, and escalates anything it isn't sure about."
+)
+
+tab_dashboard, tab_review, tab_audit = st.tabs(
+    ["📊 Dashboard", "🔎 Needs review", "📜 Audit trail"]
+)
+
+# ---------------------------------------------------------------------
+# Tab 1: Dashboard — everything at a glance
+# ---------------------------------------------------------------------
+with tab_dashboard:
+    col1, col2 = st.columns([3, 2])
+
+    with col1:
+        st.subheader("All recommendations")
+        rows = []
+        for d in drafts:
+            lane = escalate.route(d, threshold)
+            rows.append({
+                "SKU": d["sku_id"],
+                "Name": d["sku_name"],
+                "Qty": d["recommended_qty"],
+                "Est. cost": f"${d['total_cost']:,.2f}",
+                "Confidence": d["confidence"],
+                "Lane": "🟡 Needs review" if lane == "needs_review" else "🟢 Auto-approved",
+                "Tags": ", ".join(d["tags"]) if d["tags"] else "—",
+            })
+        df = pd.DataFrame(rows).sort_values("Confidence")
+        st.dataframe(df, use_container_width=True, hide_index=True)
+
+    with col2:
+        st.subheader("Demand trend: the 3 edge cases")
+        pick = st.selectbox(
+            "SKU",
+            options=["APP-1042 (demand spike)", "FTW-3301 (lead-time disruption)", "ACC-9981 (long-tail)"],
+        )
+        sku_id = pick.split()[0]
+        chart_data = sales[sales.sku_id == sku_id][["week_number", "units_sold"]]
+        chart = (
+            alt.Chart(chart_data)
+            .mark_line(point=True)
+            .encode(x="week_number:Q", y="units_sold:Q")
+            .properties(height=260)
+        )
+        st.altair_chart(chart, use_container_width=True)
+
+# ---------------------------------------------------------------------
+# Tab 2: Needs review — the actual trust & control layer
+# ---------------------------------------------------------------------
+with tab_review:
+    st.subheader("Recommendations held for planner review")
+    review_drafts = [d for d in drafts if escalate.route(d, threshold) == "needs_review"]
+
+    if not review_drafts:
+        st.info("Nothing is currently below the confidence threshold. Try lowering the slider.")
+
+    for d in review_drafts:
+        with st.container(border=True):
+            c1, c2 = st.columns([3, 1])
+            with c1:
+                st.markdown(f"**{d['sku_id']} — {d['sku_name']}**")
+                st.caption(f"Tags: {', '.join(d['tags'])}")
+                for r in d["reasoning"]:
+                    st.write(f"- {r}")
+            with c2:
+                st.metric("Confidence", f"{d['confidence']:.0%}")
+                st.metric("Recommended qty", d["recommended_qty"])
+
+            edited_qty = st.number_input(
+                "Approve with quantity:", min_value=0, value=d["recommended_qty"], key=f"qty_{d['sku_id']}"
+            )
+            b1, b2, b3 = st.columns(3)
+            if b1.button("✅ Approve", key=f"approve_{d['sku_id']}"):
+                st.session_state.decision_log.append({
+                    "sku_id": d["sku_id"], "action": "approved", "qty": edited_qty, "note": "",
+                })
+                st.success(f"Approved {d['sku_id']} at qty {edited_qty}")
+            if b2.button("✏️ Approve edited", key=f"edit_{d['sku_id']}"):
+                st.session_state.decision_log.append({
+                    "sku_id": d["sku_id"], "action": "edited", "qty": edited_qty, "note": "Quantity adjusted by planner",
+                })
+                st.success(f"Logged edited quantity for {d['sku_id']}: {edited_qty}")
+            reject_note = b3.text_input("Reason if rejecting", key=f"note_{d['sku_id']}", label_visibility="collapsed", placeholder="Reason if rejecting")
+            if st.button("❌ Reject", key=f"reject_{d['sku_id']}"):
+                st.session_state.decision_log.append({
+                    "sku_id": d["sku_id"], "action": "rejected", "qty": 0, "note": reject_note or "No reason given",
+                })
+                st.warning(f"Rejected {d['sku_id']}")
+
+# ---------------------------------------------------------------------
+# Tab 3: Audit trail — the feedback-loop artifact from our workflow design
+# ---------------------------------------------------------------------
+with tab_audit:
+    st.subheader("Planner decision log")
+    st.caption(
+        "Every approval, edit, or rejection is logged here. In a production version, "
+        "rejections and edits would feed back into the decide stage's thresholds — "
+        "the feedback loop from the workflow design."
+    )
+    if st.session_state.decision_log:
+        st.dataframe(pd.DataFrame(st.session_state.decision_log), use_container_width=True, hide_index=True)
+    else:
+        st.info("No decisions logged yet — approve or reject something in the 'Needs review' tab.")

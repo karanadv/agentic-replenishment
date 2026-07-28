@@ -1,0 +1,16 @@
+sku_id,sku_name,category,supplier_id,on_hand_units,unit_cost,unit_price,current_lead_time_days,trailing_4wk_avg_weekly_demand,trailing_8wk_avg_weekly_demand,safety_stock_units,reorder_point_units
+APP-1042,Trail Runner Jacket,Apparel,SUP-01,22,42.0,95.0,14,137.25,89.38,44.7,223.4
+APP-2210,Merino Base Layer,Apparel,SUP-01,79,18.5,48.0,14,31.0,30.38,15.2,76.0
+APP-2255,Fleece Vest,Apparel,SUP-02,84,22.0,55.0,18,24.5,22.88,11.4,70.2
+FTW-3301,Trail Runner Shoe - Men's,Footwear,SUP-03,132,38.0,110.0,45,53.0,49.12,24.6,340.4
+FTW-3302,Trail Runner Shoe - Women's,Footwear,SUP-03,112,38.0,110.0,45,44.75,46.62,23.3,323.0
+FTW-3350,Hiking Sandal,Footwear,SUP-03,48,24.0,65.0,45,19.0,18.88,9.4,130.7
+EQP-4410,45L Backpack,Equipment,SUP-02,65,55.0,145.0,18,16.5,16.12,8.1,49.6
+EQP-4455,2-Person Tent,Equipment,SUP-04,29,88.0,220.0,25,9.0,9.75,4.9,39.7
+EQP-4478,Trekking Poles (Pair),Equipment,SUP-02,45,19.0,49.0,18,21.25,22.0,11.0,67.6
+ACC-9901,Wool Socks (3-pack),Accessory,SUP-01,193,8.5,22.0,14,59.75,61.25,30.6,153.1
+ACC-9915,Insulated Water Bottle,Accessory,SUP-04,78,6.0,19.0,25,37.25,36.75,18.4,149.6
+ACC-9930,Headlamp,Accessory,SUP-04,115,9.5,28.0,25,30.5,28.38,14.2,115.5
+ACC-9981,"Replacement Buckle, Blue",Accessory,SUP-02,5,1.2,6.0,18,0.0,0.25,0.1,0.7
+ACC-9982,"Replacement Buckle, Black",Accessory,SUP-02,7,1.2,6.0,18,0.25,0.5,0.2,1.5
+APP-2299,Rain Shell,Apparel,SUP-01,38,31.0,85.0,14,16.0,17.38,8.7,43.4
