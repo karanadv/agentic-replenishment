@@ -40,6 +40,11 @@ def decide(feature_row: dict) -> dict:
     lead_time = feature_row["current_lead_time_days"]
     lead_time_changed = feature_row["lead_time_changed"]
     on_hand = feature_row["on_hand_units"]
+    # Reorder against inventory POSITION (on hand + already on order), not
+    # on-hand alone. Ordering against on-hand double-counts demand that an
+    # in-flight purchase order is already covering.
+    inventory_position = feature_row["inventory_position"]
+    has_open_po = feature_row["has_open_po"]
 
     # --- 1. Long-tail / sparse-history check (runs first: if data is too
     #     thin, nothing downstream can be trusted, so we short-circuit) ---
@@ -55,19 +60,20 @@ def decide(feature_row: dict) -> dict:
         # and over-ordering a slow mover ties up cash in stock that won't move.
         demand_basis = min(trailing_8wk, trailing_4wk)
         lead_time_demand = demand_basis * (lead_time / 7.0)
-        # net off stock already on hand — without this the system reorders
-        # regardless of how much cover it already has
-        recommended_qty = max(0, round(lead_time_demand - on_hand))
+        # net off stock already on hand and already on order — without this the
+        # system reorders regardless of how much cover it already has
+        recommended_qty = max(0, round(lead_time_demand - inventory_position))
         if recommended_qty == 0:
             reasoning.append(
-                f"{on_hand} units on hand already covers the ~{lead_time_demand:.1f} units "
-                f"expected over the {lead_time}-day lead time — no reorder needed, "
-                "but flagged so a planner can confirm."
+                f"{inventory_position} units on hand or on order already covers the "
+                f"~{lead_time_demand:.1f} units expected over the {lead_time}-day lead time — "
+                "no reorder needed, but flagged so a planner can confirm."
             )
         else:
             reasoning.append(
-                f"Minimal reorder of ~{recommended_qty} units ({on_hand} on hand against "
-                f"~{lead_time_demand:.1f} units of lead-time demand), flagged for manual sizing."
+                f"Minimal reorder of ~{recommended_qty} units ({inventory_position} on hand or on "
+                f"order against ~{lead_time_demand:.1f} units of lead-time demand), flagged for "
+                "manual sizing."
             )
     else:
         # --- 2. Demand spike check ---
@@ -115,7 +121,15 @@ def decide(feature_row: dict) -> dict:
 
         safety_stock = demand_basis * SAFETY_STOCK_WEEKS_FACTOR
         reorder_point = demand_basis * (lead_time / 7.0) + safety_stock
-        recommended_qty = max(0, round(reorder_point - on_hand))
+        recommended_qty = max(0, round(reorder_point - inventory_position))
+        if has_open_po:
+            reasoning.append(
+                f"{feature_row['on_order_units']} units are already on order, arriving in "
+                f"{feature_row['on_order_arrival_days']} days. The reorder is sized against "
+                f"{inventory_position} units of inventory position (on hand plus on order), not "
+                f"the {on_hand} physically on the shelf — otherwise it would order again for "
+                "demand a purchase order already covers."
+            )
 
     # --- 3. Lead-time disruption check (applies regardless of the branch above) ---
     if lead_time_changed:
@@ -177,13 +191,19 @@ def decide(feature_row: dict) -> dict:
     if stockout_gap_days >= STOCKOUT_GAP_URGENT_DAYS:
         tags.append("stockout_risk_cx_impact")
         urgent = True
+        arrival_phrase = (
+            f"the {feature_row['on_order_units']} units already on order do not land for "
+            f"{feature_row['on_order_arrival_days']} days"
+            if has_open_po else
+            f"a reorder placed today takes {lead_time} days to arrive"
+        )
         reasoning.append(
-            f"On-hand stock covers ~{days_of_cover:.0f} days at the current sell-through rate, but the "
-            f"next reorder takes {lead_time} days to arrive — roughly {stockout_gap_days:.0f} days with "
-            f"nothing on the shelf, or about {units_at_risk:.0f} units of demand left unserved "
-            f"({revenue_at_risk:,.0f} at retail). During that window in-store pickup promises break and "
-            "stores would need cross-location fulfillment to cover orders. Flagged regardless of forecast "
-            "confidence, since this is an operational timing risk, not a demand-accuracy one."
+            f"On-hand stock covers ~{days_of_cover:.0f} days at the current sell-through rate, but "
+            f"{arrival_phrase} — roughly {stockout_gap_days:.0f} days with nothing on the shelf, or "
+            f"about {units_at_risk:.0f} units of demand left unserved ({revenue_at_risk:,.0f} at "
+            "retail). During that window in-store pickup promises break and stores would need "
+            "cross-location fulfillment to cover orders. Flagged regardless of forecast confidence, "
+            "since this is an operational timing risk, not a demand-accuracy one."
         )
 
     confidence = max(0.05, min(0.99, round(confidence, 2)))

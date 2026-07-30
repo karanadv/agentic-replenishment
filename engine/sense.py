@@ -125,6 +125,19 @@ def compute_features(sales: pd.DataFrame, suppliers: pd.DataFrame, inventory: pd
         current_burn_rate = max(trailing_4wk, trailing_8wk) / 7.0
         days_of_cover = (inv_row["on_hand_units"] / current_burn_rate) if current_burn_rate > 0 else 999.0
 
+        # --- open purchase orders already in flight. Two things depend on this.
+        # First, the shortage horizon: if stock is already on its way, the gap
+        # runs to THAT arrival, not to the lead time of a hypothetical new
+        # order. Without it the system re-raises an identical alert every run
+        # for a shortage a planner already acted on, which is how alert
+        # fatigue starts. Second, inventory position (below): reordering
+        # against on-hand alone double-counts demand already ordered against.
+        on_order = inv_row.get("on_order_units", 0)
+        on_order_arrival_days = inv_row.get("on_order_arrival_days", 0)
+        has_open_po = on_order > 0
+        next_arrival_days = on_order_arrival_days if has_open_po else current_lead_time
+        inventory_position = inv_row["on_hand_units"] + on_order
+
         # --- exposure: how much demand actually goes unserved during the gap.
         # This is deliberately built from information the reorder calculation
         # never touches (unit price), because otherwise "urgency" is just a
@@ -132,7 +145,7 @@ def compute_features(sales: pd.DataFrame, suppliers: pd.DataFrame, inventory: pd
         # second dimension. Two SKUs with the same shortfall in days can carry
         # very different exposure depending on how fast they sell and what
         # they are worth.
-        stockout_gap_days = max(0.0, current_lead_time - days_of_cover)
+        stockout_gap_days = max(0.0, next_arrival_days - days_of_cover)
         units_at_risk = stockout_gap_days * current_burn_rate
         revenue_at_risk = units_at_risk * inv_row["unit_price"]
 
@@ -142,6 +155,11 @@ def compute_features(sales: pd.DataFrame, suppliers: pd.DataFrame, inventory: pd
             "category": inv_row["category"],
             "supplier_id": supplier_id,
             "on_hand_units": inv_row["on_hand_units"],
+            "on_order_units": on_order,
+            "on_order_arrival_days": on_order_arrival_days,
+            "has_open_po": has_open_po,
+            "inventory_position": inventory_position,
+            "next_arrival_days": next_arrival_days,
             "unit_cost": inv_row["unit_cost"],
             "unit_price": inv_row["unit_price"],
             "trailing_4wk_avg": round(trailing_4wk, 2),

@@ -60,6 +60,11 @@ a planner knows why the number looks different."
 computing a number off almost no data, the agent flags insufficient history and drops
 confidence to 40%."
 
+"One thing that isn't visible in these four but is worth mentioning: the same test runs in
+the opposite direction. A SKU whose demand *collapses* gets flagged too, and gets sized
+against its recent, lower demand — otherwise the system would order into a market it's
+already losing while reporting itself confident."
+
 **[Switch to Needs review tab]**
 
 "This is the trust and control layer. Anything below the confidence threshold — or
@@ -73,12 +78,29 @@ stock will run out before the next reorder arrives, which is exactly when in-sto
 promises break and a store would need cross-location fulfillment. I didn't build that
 routing — it's flagged so a human handles it instead of being silently auto-approved."
 
+"The queue is ordered by exposure, not by confidence — units of demand that go unserved
+during the gap, valued at retail. The jacket at the top has the *smallest* shortfall in days
+of the three urgent items, but the highest exposure, because it sells far faster. Ranking by
+days would have pushed it down the list."
+
+"And one product that *was* urgent isn't here at all. It has a purchase order already in
+flight, arriving inside its remaining cover — so the system knows the shortage is being dealt
+with and stops raising it. Without that, the same items reappear every single run and people
+stop reading the queue."
+
 **[Drag the sidebar confidence slider from 0.70 to 0.80]**
 
-"And the confidence threshold itself is a live control, not a hardcoded number. Watch — the
-channel-shift SKU, sitting at 75% confidence, just moved into the review queue. Note the
-spike SKU doesn't move, because it's flagged urgent — that's the point of having a signal
-the autonomy dial can't override."
+"The threshold itself is a live control, not a hardcoded number. Watch — the channel-shift
+SKU at 75% confidence just moved into the review queue. The spike SKU doesn't move, because
+it's flagged urgent."
+
+**[Drag the slider all the way down to 0.00]**
+
+"And this is the part I'd point at first. The slider goes to zero, but the buckle SKU stays
+in review — because there's a hard floor at 50% the planner can't lower. That item's own
+reasoning says it has too little history to trust a demand average. If the agent has declared
+something beyond its own competence, an autonomy dial shouldn't be able to wave it through.
+A trust layer you can instruct to trust itself completely isn't a trust layer."
 
 **[Switch to Audit trail tab]**
 
@@ -86,7 +108,7 @@ the autonomy dial can't override."
 into the agent's thresholds over time — that feedback loop is designed for, though not yet
 wired up in this prototype."
 
-## Section 3 — Data dictionary and README limitations (3:30–4:20)
+## Section 3 — Data dictionary and README limitations (3:40–4:25)
 
 **[Show data/data_dictionary.md]**
 
@@ -106,18 +128,28 @@ when those would be needed instead of simulating the routing itself. And the Str
 wasn't runtime-tested in the build sandbox, since it had no network access to install
 Streamlit — I flagged that explicitly rather than claim more confidence than I had."
 
-## Section 4 — Assumptions and key decisions (4:20–5:00)
+## Section 4 — Assumptions and key decisions (4:25–5:00)
 
 "A few decisions worth calling out. First, no LLM — the brief listed it as not applicable,
 and reorder recommendation is fundamentally a statistics problem, so I used fully
 explainable rules instead of a black box. Second, the confidence threshold is a tunable
 control, not a hardcoded constant, because how much autonomy the agent gets is a judgment
-call that belongs to the planner, not to the code. Third, long-tail SKUs and demand spikes
-both fail *conservative*, not falsely confident — insufficient data becomes a legitimate,
-flagged decision rather than a number dressed up to look certain. And finally, the urgent
-stockout-risk flag always forces human review regardless of confidence, because that's an
-operational timing risk, not a forecasting question — a confidence slider shouldn't be able
-to wave it through. All of this reasoning is written out fully in the decisions README."
+call that belongs to the planner — but it has a floor, because an unbounded version of that
+control turned out to be incoherent. Third, long-tail SKUs and demand shifts both fail
+*conservative*, not falsely confident — insufficient data becomes a legitimate, flagged
+decision rather than a number dressed up to look certain. And fourth, urgency is ranked by
+exposure rather than by shortfall in days, because ranking by days buried the highest-risk
+item further down the list. And fifth, the system tracks orders already in flight — both so
+alerts clear when a shortage is being handled, and so it doesn't re-order for demand an
+existing purchase order already covers.
+
+"One I'd call out as a defect rather than a decision: the urgent flag currently holds the
+purchase order, but it justifies itself in fulfilment terms. For a high-confidence item
+that means delaying the very replenishment that ends the stockout. The right design places
+the order and escalates the customer-experience response separately. That's a routing
+rebuild, so it's documented as a known defect rather than quietly left to look clean. The
+decisions README carries the full reasoning, including what would make each of these calls
+wrong."
 
 ---
 
@@ -127,5 +159,5 @@ to wave it through. All of this reasoning is written out fully in the decisions 
 - [ ] App running locally or on the deployed URL (https://agentic-replenishment-cfz5mznsmvyujuc692qt9e.streamlit.app/), confidence slider reset to 0.70
 - [ ] `data/data_dictionary.md` and `decisions_README.md` open and ready to scroll
 - [ ] Have one item ready in the review queue to click Approve/Reject on
-- [ ] Know which SKU you'll flip with the slider (APP-2210 at 0.75 confidence — drag 0.70 → 0.80)
+- [ ] Slider moves, in order: 0.70 → 0.80 (flips APP-2210 into review), then → 0.00 (ACC-9981 stays, held by the 50% floor)
 - [ ] Say the live URL out loud once (https://agentic-replenishment-cfz5mznsmvyujuc692qt9e.streamlit.app/), so it's captured in the recording

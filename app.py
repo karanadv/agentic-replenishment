@@ -97,6 +97,8 @@ with tab_dashboard:
                 "SKU": d["sku_id"],
                 "Name": d["sku_name"],
                 "Qty": d["recommended_qty"],
+                "On order": (f"{d['on_order_units']} in {d['on_order_arrival_days']}d"
+                             if d["on_order_units"] else "—"),
                 "Est. cost": f"${d['total_cost']:,.2f}",
                 "Confidence": d["confidence"],
                 "Lane": lane_label,

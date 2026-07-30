@@ -244,6 +244,36 @@ the flagged set would diverge too.
 *This would be the wrong call if* stockouts on low-value items carried reputational cost out
 of proportion to their revenue — in which case ranking by money actively buries them.
 
+## 12. Open purchase orders are modelled, so alerts can clear
+
+The urgency flag previously measured the gap between days of cover and lead time — the lead
+time of a hypothetical order placed today. It had no concept of stock already on its way.
+Two consequences followed, and the second was a defect in its own right.
+
+**Alerts never cleared.** A SKU flagged short stayed flagged on every subsequent run until
+physical stock arrived, regardless of whether a planner had approved a purchase order for it
+the day before. The same items reappeared indefinitely with no acknowledged state, which is
+the standard route to alert fatigue and to a review queue people stop reading.
+
+**Reorders double-counted.** Sizing an order against on-hand stock alone ignores demand an
+in-flight purchase order is already covering, so the system re-orders for it. On this dataset
+that caused a 79-unit double-order on `FTW-3350` — roughly 1,900 of stock that did not need
+buying.
+
+The inventory snapshot now carries `on_order_units` and `on_order_arrival_days`. The shortage
+horizon runs to the next *actual* arrival rather than to a hypothetical one, and reorder
+quantities net against inventory position (on hand plus on order) rather than on-hand. With a
+purchase order in flight arriving inside its remaining cover, `FTW-3350` correctly drops out
+of the urgent list — the alert clears because the problem is being handled.
+
+*Stated plainly:* the netting changes the quantity on one of the two SKUs with open orders.
+On the other, on-hand alone already exceeded the reorder point, so it makes no difference
+there. The mechanism is correct but this dataset exercises it lightly.
+
+*This would be the wrong call if* open purchase orders were unreliable enough that treating
+them as certain future stock caused under-ordering — in which case they should be discounted
+by supplier fill rate rather than counted at face value.
+
 ## Limitations
 
 ### Signal design
@@ -309,12 +339,13 @@ of proportion to their revenue — in which case ranking by money actively burie
   subset of the reorder condition. A genuinely orthogonal urgency signal would need inputs
   this dataset does not contain: substitutability, promise sensitivity by channel, or an
   explicit service-level target per SKU.
-- **Urgency never clears.** `days_of_cover` is computed from on-hand stock alone; nothing
-  models on-order or in-transit inventory. A SKU therefore stays urgent on every run until
-  physical stock arrives, regardless of whether a planner approved a PO for it yesterday.
-  The same items reappear in the queue indefinitely with no acknowledged state, which is the
-  standard path to alert fatigue. Fixing it requires modelling open purchase orders, which
-  this dataset does not contain.
+- **Alerts clear on in-flight stock, but there is still no acknowledged state.** Open
+  purchase orders are now modelled (decision 12), so a shortage being actively dealt with
+  stops re-alerting. What is still missing is persistence of the planner's own decisions: an
+  approval made in one session does not survive into the next, because nothing is written back
+  to the inventory snapshot. In a production system the approved order would become an open
+  PO and close the loop; here the loop is closed only for orders that were already open when
+  the data was generated.
 
 ### Other limitations
 

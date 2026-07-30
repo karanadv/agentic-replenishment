@@ -23,6 +23,8 @@ def draft_po(feature_row: dict, decision: dict) -> dict:
         "confidence": decision["confidence"],
         "urgent": decision["urgent"],
         "revenue_at_risk": decision["revenue_at_risk"],
+        "on_order_units": feature_row["on_order_units"],
+        "on_order_arrival_days": feature_row["on_order_arrival_days"],
         "tags": decision["tags"],
         "reasoning": decision["reasoning"],
     }
