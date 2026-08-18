@@ -1,4 +1,4 @@
-<svg width="1100" height="880" viewBox="0 0 1100 880" xmlns="http://www.w3.org/2000/svg" role="img" style="background:#ffffff">
+<svg width="1100" height="550" viewBox="0 0 1100 550" xmlns="http://www.w3.org/2000/svg" role="img" style="background:#ffffff">
 <title>The as-is manual replenishment process at Northpeak Outfitters</title>
 <desc>A four-step linear manual process — pull data, analyse, decide, act — performed end to end by a single planner in roughly half a day, with the failure mode of each step annotated, and with no review or audit stage at any point.</desc>
 
@@ -96,36 +96,5 @@
 <rect x="50" y="416" width="1000" height="74" rx="10" fill="#FDF7F5" stroke="#E3C9C2" stroke-width="1.6" stroke-dasharray="7 5"/>
 <text class="gt" x="76" y="446">Review and audit — this stage does not exist</text>
 <text class="gb" x="76" y="469">Nothing verifies the quantities before they are committed, and no record of the reasoning survives the moment they are entered.</text>
-
-<line x1="50" y1="530" x2="1050" y2="530" stroke="#E2E6DC" stroke-width="1"/>
-<text class="lbl" x="50" y="562">HOW THE PROCESS ACTUALLY RUNS</text>
-
-<text class="h2" x="50" y="598">What happens each week</text>
-<text class="bdy" x="50" y="622">Every Tuesday the planner exports the previous week's sales from the</text>
-<text class="bdy" x="50" y="642">ERP, opens the file in a spreadsheet, and works down the list. She</text>
-<text class="bdy" x="50" y="662">compares recent movement against what is on the shelf, factors in how</text>
-<text class="bdy" x="50" y="682">long each supplier usually takes, and types quantities back in by hand.</text>
-<text class="bdy" x="50" y="702">The full cycle takes roughly half a day.</text>
-
-<text class="h2" x="580" y="598">Why it holds together at all</text>
-<text class="bdy" x="580" y="622">It works because the planner is experienced. Eleven years of pattern</text>
-<text class="bdy" x="580" y="642">recognition substitute for a method — she knows which lines move in</text>
-<text class="bdy" x="580" y="662">spring, which suppliers slip, and which numbers look wrong before she</text>
-<text class="bdy" x="580" y="682">can say quite why. That expertise is real, and it is doing all of the</text>
-<text class="bdy" x="580" y="702">load-bearing work in this diagram.</text>
-
-<text class="h2" x="50" y="748">Where it breaks</text>
-<text class="bdy" x="50" y="772">It breaks at the edges of attention. Several thousand products compete</text>
-<text class="bdy" x="50" y="792">for one morning, so a few hundred receive real judgement and the rest</text>
-<text class="bdy" x="50" y="812">get a rule of thumb. Slow-moving lines are dropped first — which is</text>
-<text class="bdy" x="50" y="832">exactly where a stockout is hardest to notice, and most irritating to</text>
-<text class="bdy" x="50" y="852">the customer who came in for that one part.</text>
-
-<text class="h2" x="580" y="748">What is missing entirely</text>
-<text class="bdy" x="580" y="772">There is no review step and no audit trail. Nothing checks the</text>
-<text class="bdy" x="580" y="792">numbers before they are committed, and once entered the reasoning</text>
-<text class="bdy" x="580" y="812">is gone. Six months later nobody — including the planner — can</text>
-<text class="bdy" x="580" y="832">say why an order was 400 rather than 200 units. The business does</text>
-<text class="bdy" x="580" y="852">not merely depend on one person; it depends on her memory.</text>
 
 </svg>

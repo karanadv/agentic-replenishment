@@ -1,163 +1,156 @@
 # 5-minute video script
 
-A heads-up before you record: I don't have a tool that renders an actual video file in
-this environment — no screen-recording or video-generation capability here. What follows
-is a precise, timed script plus the two diagrams as standalone image files
-(`diagrams/as_is_process.svg` and `diagrams/agentic_workflow.svg`) so you can record this
-yourself in one take using Loom, QuickTime, or OBS. Open the two diagram SVGs in a browser
-tab and the running app in another tab, and you're ready to go.
+This is the version to record. It runs three edge cases rather than four — the lead-time
+disruption is deliberately dropped, for reasons noted at the end — and comes to roughly
+857 spoken words. That's about 5:25 at an unhurried 155 words per minute, or just under
+5:00 at a normal presenting pace of 175. If you tend to speak slowly, drop the closing
+paragraph of Section 4 — the defect and defect-count beat — which brings it to 4:50 either way.
 
-Total budget: 5:00. Section timings below add up to 5:00 — treat them as a guide, not a
-stopwatch; natural pacing matters more than hitting the second mark exactly.
+Every figure below was verified against the current engine. If a number on screen disagrees
+with the script, the deployed app is running older code — push the current `engine/` files
+and reboot before recording.
+
+**Before you start:** open `diagrams/as_is_process_diagram_only.svg` and
+`diagrams/agentic_workflow_diagram_only.svg` in browser tabs. Use the diagram-only versions,
+not the full ones — those carry paragraphs of body text that are unreadable on a screen share.
 
 ---
 
-## Section 1 — As-is vs. agentic workflow, with diagrams (0:00–1:00)
+## Section 1 — The two workflows (0:00–0:55)
 
-**[Show diagrams/as_is_process.svg]**
+**[Show `as_is_process_diagram_only.svg`]**
 
-"Today, replenishment for this retailer is entirely manual. A planner exports sales data
-from the ERP, eyeballs trends with no systematic method, decides a reorder quantity on gut
-feel, and keys it back in. There's no review step and no audit trail — one planner holds
-all the judgment, and even they couldn't reconstruct why a decision was made a month later."
+"Replenishment at this retailer is entirely manual. A planner exports sales from the ERP,
+scrolls a spreadsheet, sets reorder quantities on judgement, and keys them back in — about
+half a day, every week. There's no review step and no audit trail. Six months later nobody,
+including the planner, can say why an order was four hundred units rather than two hundred."
 
-**[Show diagrams/agentic_workflow.svg]**
+**[Show `agentic_workflow_diagram_only.svg`]**
 
-"I reimagined this as an agentic loop: the system senses demand and supply signals,
-decides a recommendation with a confidence score, drafts it, and escalates anything it's
-not sure about — or anything urgent — to a human. The planner isn't cut out of the loop;
-their judgment is concentrated at the moments that actually need it — setting the
-autonomy threshold, reviewing flagged items, approving, editing, or rejecting — instead of
-being spread thin across every single step with nothing checked."
+"I rebuilt it as an agentic loop — sense, decide, act, escalate. The agent reads the data,
+sizes a reorder with an explicit confidence score, drafts the order with its reasoning
+attached, and holds back anything it's unsure about or anything about to run dry. The
+planner isn't removed from the loop. Their judgement is concentrated at the one point it's
+worth spending, instead of being spread across every step with nothing checked."
 
-## Section 2 — Full prototype demo, all 4 edge cases (1:00–3:30)
+## Section 2 — The prototype and three hard cases (0:55–2:55)
 
 **[Switch to the running app, Dashboard tab]**
 
-"This is the working prototype — 26 weeks of synthetic sales, inventory, and supplier data
-across 15 SKUs, split by online and in-store channel since this is an omnichannel
-retailer. Every row here is a recommendation the agent already computed, sorted by
-confidence so the least-certain ones float to the top."
+"Twenty-six weeks of synthetic data, fifteen products, split by online and in-store channel.
+Every row is a recommendation the agent has already computed, sorted by confidence — the
+buckle at 40% and the jacket at 50% sit at the top, and the products it has no doubts about
+sit below."
 
-**[Use the SKU selector to show each channel chart in turn]**
+**[Select APP-1042 in the SKU selector]**
 
-"**Demand spike — APP-1042**: this jacket saw a 4x jump in the last three weeks, mostly
-online, from a viral moment. The obvious fix is to fall back to a longer averaging window —
-but that doesn't work, because the spike weeks are inside that window too. The eight-week
-average here is 95 units against a true baseline of 42. So the agent excludes the flagged
-event weeks outright and sizes against 42, and it says so in the reasoning — including that
-the eight-week figure isn't a clean baseline either. Confidence drops to 50%."
+"**The jacket that went viral.** It normally sells 39 a week. For three weeks it sold 188,
+176, 188 — mostly online, from an influencer video.
 
-"**Hidden channel shift — APP-2210**: total units barely move week to week — nothing looks
-unusual in the total. But online demand triples while store drops. This is only visible at
-the channel level, and it matters because the stock allocated for online hasn't caught up."
+The obvious fix is to fall back to a longer averaging window and let the spike wash out.
+That doesn't work, and this is the most instructive thing in the build: the spike weeks sit
+*inside* that longer window too. The eight-week average is 95 units against a true baseline
+of 42. The first version of this system was over-ordering by more than double while its own
+reasoning told the planner it had corrected for the spike.
 
-"**Lead-time disruption — FTW-3301**: this footwear supplier's lead time jumped from 21 to
-45 days from port congestion. The reorder math updates automatically, and it's flagged so
-a planner knows why the number looks different."
+So the agent now excludes the flagged event weeks outright and sizes against 42 — and the
+reasoning says explicitly that the eight-week figure isn't a clean baseline either.
+Confidence drops to 50%."
 
-"**Long-tail SKU — ACC-9981**: sold in only 2 of the last 12 weeks. Rather than confidently
-computing a number off almost no data, the agent flags insufficient history and drops
-confidence to 40%."
+**[Select APP-2210]**
 
-"One thing that isn't visible in these four but is worth mentioning: the same test runs in
-the opposite direction. A SKU whose demand *collapses* gets flagged too, and gets sized
-against its recent, lower demand — otherwise the system would order into a market it's
-already losing while reporting itself confident."
+"**The customers who quietly moved online.** Total units barely move — around thirty a week,
+before and after. Nothing looks unusual in the total at all.
+
+Underneath, in-store sales collapsed from sixteen a week to three while online climbed from
+fourteen to twenty-two. Customers migrated and the stock allocation didn't follow them. No
+amount of looking at the combined figure would surface this. It's visible only because the
+two channels are sensed separately — which is the whole argument for splitting them."
+
+**[Select ACC-9981]**
+
+"**The buckle nobody notices.** Sold in three of the last twelve weeks. A standard formula
+still produces a number here, but the number is meaningless — an average of almost nothing
+is still almost nothing.
+
+So the agent says so. It flags insufficient history, drops confidence to 40%, and checks
+what's already on the shelf: three units covers the 0.6 units of demand expected over the
+lead time. It recommends ordering nothing at all, and flags it for a planner to confirm."
+
+## Section 3 — Trust and control (2:55–3:55)
 
 **[Switch to Needs review tab]**
 
-"This is the trust and control layer. Anything below the confidence threshold — or
-anything urgent — lands here with its full reasoning. I can approve as-is, edit the
-quantity, or reject with a reason."
+"This is the trust layer. Anything below the confidence threshold, or anything urgent, lands
+here with its full reasoning — approve as-is, edit the quantity, or reject with a stated
+reason."
 
 **[Click Approve edited or Reject on one item]**
 
-"Notice this one's marked urgent — that's a separate signal from confidence. It means
-stock will run out before the next reorder arrives, which is exactly when in-store pickup
-promises break and a store would need cross-location fulfillment. I didn't build that
-routing — it's flagged so a human handles it instead of being silently auto-approved."
+"The queue is ordered by exposure — units of demand that go unserved, valued at retail. The
+jacket sits at the top carrying three risk tags at once. The two footwear lines below it are
+a supplier whose lead time doubled from port congestion, so they're short too."
 
-"The queue is ordered by exposure, not by confidence — units of demand that go unserved
-during the gap, valued at retail. The jacket at the top has the *smallest* shortfall in days
-of the three urgent items, but the highest exposure, because it sells far faster. Ranking by
-days would have pushed it down the list."
+**[Drag the sidebar confidence slider all the way down to 0.00]**
 
-"And one product that *was* urgent isn't here at all. It has a purchase order already in
-flight, arriving inside its remaining cover — so the system knows the shortage is being dealt
-with and stops raising it. Without that, the same items reappear every single run and people
-stop reading the queue."
+"And here's the part I'd point at first. The threshold is a live control — but drag it to
+zero and the buckle *stays* in review. There's a hard floor at 50% the planner can't lower.
 
-**[Drag the sidebar confidence slider from 0.70 to 0.80]**
+That item's own reasoning says it has too little history to trust a demand average. If the
+agent has declared something beyond its own competence, an autonomy dial shouldn't be able
+to wave it through. A trust layer you can instruct to trust itself completely isn't a trust
+layer."
 
-"The threshold itself is a live control, not a hardcoded number. Watch — the channel-shift
-SKU at 75% confidence just moved into the review queue. The spike SKU doesn't move, because
-it's flagged urgent."
+## Section 4 — Limitations and decisions (3:55–5:00)
 
-**[Drag the slider all the way down to 0.00]**
+**[Show `decisions_README.md`, scroll to Limitations]**
 
-"And this is the part I'd point at first. The slider goes to zero, but the buckle SKU stays
-in review — because there's a hard floor at 50% the planner can't lower. That item's own
-reasoning says it has too little history to trust a demand average. If the agent has declared
-something beyond its own competence, an autonomy dial shouldn't be able to wave it through.
-A trust layer you can instruct to trust itself completely isn't a trust layer."
+"Twenty-three limitations are recorded, in the same detail as the fixes. The thresholds are
+hand-tuned against invented data. The spike measure itself saturates because the averaging
+windows overlap, so a product whose demand merely doubles still reads as stable.
 
-**[Switch to Audit trail tab]**
+The scope boundary I'd name explicitly is BOPIS and BORIS — buy online and pick up in store,
+and buy online and return in store. Neither was considered in the design. Pickup reserves
+stock before collection, so shelf stock stops being sellable stock; returns push units back
+at an unpredictable time and often a different store. They pull the arithmetic in opposite
+directions — ignoring pickup makes the system under-order, ignoring returns makes it
+over-order.
 
-"Every decision gets logged here. In a full version, these corrections would feed back
-into the agent's thresholds over time — that feedback loop is designed for, though not yet
-wired up in this prototype."
+And one thing I'd call a defect rather than a decision: the urgent flag holds the purchase
+order, but justifies itself in fulfilment terms. For a confident recommendation that delays
+the very replenishment that ends the stockout. That's a routing rebuild, so it's documented
+as a known defect rather than quietly left to look clean.
 
-## Section 3 — Data dictionary and README limitations (3:40–4:25)
-
-**[Show data/data_dictionary.md]**
-
-"All the data is synthetic, generated specifically for this project with four edge cases
-deliberately baked in — the spike, the lead-time change, the long-tail SKU, and the hidden
-channel shift. The data dictionary documents every column and exactly how each edge case
-was constructed, so it's fully reproducible."
-
-**[Show decisions_README.md, scroll to Limitations]**
-
-"The decisions README is honest about what this prototype doesn't do. The rule thresholds
-are hand-tuned against this dataset, not validated against real retail data. There's no
-live feedback loop yet — it's designed for, not implemented. Inventory is one shared pool
-per SKU, not per-store, so full fulfillment routing — buy-online-pickup-in-store,
-ship-from-store, cross-location transfers — is out of scope; I surfaced the *signal* for
-when those would be needed instead of simulating the routing itself. And the Streamlit UI
-wasn't runtime-tested in the build sandbox, since it had no network access to install
-Streamlit — I flagged that explicitly rather than claim more confidence than I had."
-
-## Section 4 — Assumptions and key decisions (4:25–5:00)
-
-"A few decisions worth calling out. First, no LLM — the brief listed it as not applicable,
-and reorder recommendation is fundamentally a statistics problem, so I used fully
-explainable rules instead of a black box. Second, the confidence threshold is a tunable
-control, not a hardcoded constant, because how much autonomy the agent gets is a judgment
-call that belongs to the planner — but it has a floor, because an unbounded version of that
-control turned out to be incoherent. Third, long-tail SKUs and demand shifts both fail
-*conservative*, not falsely confident — insufficient data becomes a legitimate, flagged
-decision rather than a number dressed up to look certain. And fourth, urgency is ranked by
-exposure rather than by shortfall in days, because ranking by days buried the highest-risk
-item further down the list. And fifth, the system tracks orders already in flight — both so
-alerts clear when a shortage is being handled, and so it doesn't re-order for demand an
-existing purchase order already covers.
-
-"One I'd call out as a defect rather than a decision: the urgent flag currently holds the
-purchase order, but it justifies itself in fulfilment terms. For a high-confidence item
-that means delaying the very replenishment that ends the stockout. The right design places
-the order and escalates the customer-experience response separately. That's a routing
-rebuild, so it's documented as a known defect rather than quietly left to look clean. The
-decisions README carries the full reasoning, including what would make each of these calls
-wrong."
+Seventeen defects were found and fixed across this build, two only visible because fixing
+something else exposed them. The decisions README carries the reasoning behind every call —
+including, for eight of them, what would make that call wrong."
 
 ---
 
+## Why the lead-time case was dropped
+
+The four hard cases in the build are the demand spike, the hidden channel shift, the
+long-tail product, and a supplier lead time doubling from 21 to 45 days. The last one is cut
+from this script.
+
+It's the only case where the correct behaviour is what anyone would already expect —
+supplier takes longer, so order earlier and bigger. There's no counterintuitive turn and no
+moment where the naive answer is wrong. It's also the only one of the four with no defect
+behind it: the other three each carry a mistake that was found and corrected, which is the
+material that actually demonstrates engineering judgement.
+
+The two footwear lines still appear in the review queue, so the script covers them in half a
+line rather than leaving an unexplained product on screen.
+
+If you'd rather record all four, `video_script_full_4cases.md` in this folder is the longer
+version — around 8 minutes at unhurried pace, with cuttable passages marked.
+
 ## Recording checklist
 
-- [ ] Open `diagrams/as_is_process.svg` and `diagrams/agentic_workflow.svg` in browser tabs
-- [ ] App running locally or on the deployed URL (https://agentic-replenishment-cfz5mznsmvyujuc692qt9e.streamlit.app/), confidence slider reset to 0.70
-- [ ] `data/data_dictionary.md` and `decisions_README.md` open and ready to scroll
-- [ ] Have one item ready in the review queue to click Approve/Reject on
-- [ ] Slider moves, in order: 0.70 → 0.80 (flips APP-2210 into review), then → 0.00 (ACC-9981 stays, held by the 50% floor)
-- [ ] Say the live URL out loud once (https://agentic-replenishment-cfz5mznsmvyujuc692qt9e.streamlit.app/), so it's captured in the recording
+- [ ] Both diagram-only SVGs open in browser tabs
+- [ ] App running at https://agentic-replenishment-cfz5mznsmvyujuc692qt9e.streamlit.app/ with the slider at 0.70
+- [ ] `decisions_README.md` open and scrolled to Limitations
+- [ ] One item ready in the review queue to click Approve or Reject on
+- [ ] Only one slider move needed: drag 0.70 straight down to 0.00, buckle stays put
+- [ ] **Pre-flight the numbers.** Queue reads APP-1042, FTW-3301, FTW-3302, then ACC-9981. Three items marked urgent. Jacket recommends 83 units. If any differ, the deployed app is on older code
+- [ ] Say the live URL out loud once so it's captured in the recording

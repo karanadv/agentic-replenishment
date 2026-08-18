@@ -40,6 +40,22 @@ To redeploy or update after changes:
 2. Go to [share.streamlit.io](https://share.streamlit.io), sign in with GitHub.
 3. Find the app under "Manage app" and it will auto-redeploy on new commits, or click "Reboot app."
 
+## Explicitly out of scope
+
+Two omnichannel customer-experience journeys were **not** considered in the design and are
+not modelled anywhere in this system:
+
+- **BOPIS** — buy online, pick up in store. Reserves units against a named store for a named
+  customer before collection, so on-hand stock stops being the same thing as sellable stock.
+  Unmodelled, it makes available stock look larger than it is and the system under-orders.
+- **BORIS** — buy online, return in store. Returns units to a store's stock at an
+  unpredictable time, often not the store that fulfilled the order. Unmodelled, it makes
+  incoming supply look smaller than it is and the system over-orders.
+
+Neither can be represented while inventory is a single pooled figure with no per-store view.
+Ship-from-store and cross-location transfers are out of scope for the same reason. See
+`decisions_README.md` for the full reasoning.
+
 ## The three built-in edge cases
 
 - **APP-1042** (Trail Runner Jacket) — live demand spike, still elevated as of "today"

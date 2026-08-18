@@ -166,8 +166,10 @@ the extra false positives cost more than the missed shifts.
 
 ## 9. Stockout risk as an "urgent" flag — with a routing tension left unresolved
 
-Customer-experience capabilities — pickup-in-store, ship-from-store, cross-location
-fulfilment — were not built, for the scope reasons in decision 7. Instead a single signal
+Customer-experience capabilities — BOPIS (buy online, pick up in store), BORIS (buy online,
+return in store), ship-from-store and cross-location fulfilment — were not built, for the
+scope reasons in decision 7. Their absence is stated as a named limitation rather than left
+implicit, because each one changes what "available stock" means. Instead a single signal
 (`days_of_cover` against lead time, with the 7-day gap qualifier from decision 5c) marks SKUs
 where stock runs out materially before resupply. It is escalated independently of the
 confidence score, because it is an operational timing risk rather than a forecast-accuracy
@@ -380,6 +382,18 @@ by supplier fill rate rather than counted at face value.
   labeled placeholder in the UI, not a working mechanism.
 - **Single-snapshot inventory, not live.** `on_hand_units` is a static "as of today" number.
   A production system would need real-time inventory sync, not a CSV snapshot.
+- **BOPIS and BORIS are explicitly out of scope and were never modelled.** Two omnichannel
+  journeys matter here and neither is represented. **BOPIS** (buy online, pick up in store)
+  reserves units against a named store for a named customer before collection, so on-hand
+  stock and *sellable* stock stop being the same number. **BORIS** (buy online, return in
+  store) pushes returned units back into a store's stock at an unpredictable time, and
+  frequently not the store that fulfilled the order. The two distort the arithmetic in
+  opposite directions: unmodelled BOPIS reservations make available stock look larger than
+  it is, so the system **under-orders**; unmodelled BORIS returns make incoming supply look
+  smaller than it is, so the system **over-orders**. With a single pooled inventory figure
+  and no per-store view, neither can be represented, and neither the reorder quantity nor
+  the stockout signal reflects them. This is a scope boundary rather than an oversight — but
+  it is a boundary that would have to move before this could run an omnichannel retailer.
 - **No per-store inventory or fulfillment orchestration.** Inventory is one shared pool per
   SKU, not broken out by physical store. Customer-experience features like buy-online-pickup-
   in-store, ship-from-store, buy-online-return-in-store, and cross-store/warehouse fulfillment

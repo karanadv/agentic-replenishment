@@ -1,4 +1,4 @@
-<svg width="1100" height="880" viewBox="0 0 1100 880" xmlns="http://www.w3.org/2000/svg" role="img" style="background:#ffffff">
+<svg width="1100" height="550" viewBox="0 0 1100 550" xmlns="http://www.w3.org/2000/svg" role="img" style="background:#ffffff">
 <title>The agentic replenishment loop at Northpeak Outfitters</title>
 <desc>A four-stage loop — sense, decide, act, escalate — in which an agent performs the reading and arithmetic in seconds across every product, and holds back anything uncertain or operationally urgent for a planner to approve, edit or reject, with every decision recorded.</desc>
 
@@ -100,36 +100,5 @@
 <text class="gb" x="76" y="469">Every held recommendation arrives with its reasoning. Approve it, edit the quantity, or reject it with a stated reason — all of it logged.</text>
 
 <text class="loop" x="50" y="512">↻  Overrides are recorded and intended to feed back into the decision thresholds. That loop is designed, but not yet built.</text>
-
-<line x1="50" y1="534" x2="1050" y2="534" stroke="#E2E6DC" stroke-width="1"/>
-<text class="lbl" x="50" y="566">HOW THE LOOP ACTUALLY RUNS</text>
-
-<text class="h2" x="50" y="602">What the agent does each run</text>
-<text class="bdy" x="50" y="626">Every product is read, not the hundred that fit into a morning. The</text>
-<text class="bdy" x="50" y="646">agent compares recent movement by channel against stock on hand and</text>
-<text class="bdy" x="50" y="666">stock in transit, checks what each supplier is currently quoting for</text>
-<text class="bdy" x="50" y="686">delivery, and sizes a reorder. Every number carries a confidence score</text>
-<text class="bdy" x="50" y="706">and the sentences explaining how it was reached.</text>
-
-<text class="h2" x="580" y="602">Where the human stays in charge</text>
-<text class="bdy" x="580" y="626">The planner sets how much freedom the agent has, and that dial has a</text>
-<text class="bdy" x="580" y="646">floor beneath which nothing is approved automatically. Anything the</text>
-<text class="bdy" x="580" y="666">agent is unsure about, or anything about to go out of stock, is held</text>
-<text class="bdy" x="580" y="686">for a person and ranked by what it costs. Approvals, edits and</text>
-<text class="bdy" x="580" y="706">rejections are all recorded with the reason given.</text>
-
-<text class="h2" x="50" y="752">What this actually changes</text>
-<text class="bdy" x="50" y="776">The long tail stops being invisible. A product selling twice a quarter</text>
-<text class="bdy" x="50" y="796">gets the same assessment as a bestseller, and where there is too little</text>
-<text class="bdy" x="50" y="816">history to judge, the agent says so rather than inventing a number.</text>
-<text class="bdy" x="50" y="836">The reasoning behind every order now outlives the moment it was made,</text>
-<text class="bdy" x="50" y="856">which is the part that never survived before.</text>
-
-<text class="h2" x="580" y="752">What it still cannot do</text>
-<text class="bdy" x="580" y="776">It holds one pooled stock figure, so it cannot decide how to spread</text>
-<text class="bdy" x="580" y="796">inventory across shops. Two omnichannel journeys were never modelled:</text>
-<text class="bdy" x="580" y="816">BOPIS (buy online, pick up in store) and BORIS (buy online, return in</text>
-<text class="bdy" x="580" y="836">store). Both change what available stock means. And it does not yet</text>
-<text class="bdy" x="580" y="856">learn — corrections are logged but do not change the thresholds.</text>
 
 </svg>
